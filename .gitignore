@@ -1,0 +1,487 @@
+# ===========================================
+# MODERN GITIGNORE - OPTIMIZED
+# Generated: 2025-08-09
+# ===========================================
+
+# ------------------
+# .NET Core / Backend
+# ------------------
+# Build artifacts
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Ww][Ii][Nn]32/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# MSBuild
+*.binlog
+MSBuildAllProjects
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/[Pp]ackages/*
+**/packages.lock.json
+
+# .NET test results
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# Entity Framework
+*.edmx.sql
+*.edmx.diagram
+**/Migrations/*.Designer.cs
+**/Migrations/*.resx
+*.ef.cache
+migrations.json
+ef-migrations/
+
+# ------------------
+# Java / Maven / Spring Boot
+# ------------------
+# Compiled Java classes
+*.class
+
+# Build directories
+out/
+build/
+target/
+bin/
+
+# Maven specific
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle specific
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Package Files (Java specific)
+*.war
+*.nar
+*.ear
+
+# Keep essential JARs for this project
+!gson-*.jar
+!lib/*.jar
+
+# ------------------
+# Node.js / Frontend
+# ------------------
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.pnpm-store/
+
+# Production builds
+build/
+dist/
+.next/
+out/
+
+# Package manager files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output
+vitest-coverage/
+
+# Cache
+.eslintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.npm
+.sass-cache/
+.stylelintcache
+*.cache
+
+# Yarn
+.yarn-integrity
+
+# Husky
+.husky/_/
+
+# Temporary and cache files
+.DS_Store.tmp
+.cache/
+.parcel-cache/
+
+# ------------------
+# Python
+# ------------------
+.venv/
+.pytest_cache/
+
+# ------------------
+# Environment & Configuration (CRITICAL - Contains secrets)
+# ------------------
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.template
+.env.local
+.env.development*
+.env.test*
+.env.production*
+.env.staging*
+.env.homologation*
+
+# MCP Server configurations
+.mcp.json
+mcp.config.json
+mcp.json*
+argv.json
+
+# Application settings
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+appsettings.Test.json
+appsettings.Testing.json
+appsettings.Local*.json
+appsettings.Homologation.json
+
+# Keep example/template files
+!appsettings.example.json
+!appsettings.template.json
+
+# Security & Secrets
+secrets.json
+*.secrets.json
+user-secrets.json
+vapid-keys.json
+payment-secrets.json
+oauth-credentials.json
+
+# Certificate files
+*.pfx
+*.p12
+*.key
+*.pem
+*.crt
+*.cer
+
+# SSH keys
+id_rsa*
+id_ed25519*
+
+# ------------------
+# Development Tools & IDEs
+# ------------------
+
+!.vscode/*.code-snippets
+
+# JetBrains IDEs
+.idea/
+*.sln.iml
+*.iml
+
+# Eclipse IDE
+.classpath
+.project
+.settings/
+*.prefs
+
+
+
+# Visual Studio
+.vs/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# AI Development Tools
+.copilotignore
+.copilot/
+.cursorignore
+.cursorrules
+.qoderignore
+.github/
+copilot-rules/
+copilot-instructions.md
+.claude/
+.cursor/
+.roo/
+.todo2/
+.trae/
+.qoder/
+.serena/
+.traerules
+.endgame
+kengi-idiomas.code-workspace
+trae-claude-mcp-server.js
+CLAUDE.md
+GEMINI.md
+CLI/
+MCP/
+
+# Vim
+[._]*.s[a-v][a-z]
+!*.svg
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+tags
+[._]*.un~
+
+# Emacs
+\#*\#
+/.emacs.desktop*
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ------------------
+# Operating Systems
+# ------------------
+# Windows
+Thumbs.db*
+ehthumbs*.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+._*
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.apdisk
+.AppleDesktop
+Icon
+Temporary Items
+Network Trash Folder
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ------------------
+# Database & Files
+# ------------------
+# SQLite
+*.db
+*.db3
+*.sqlite*
+*.db-shm
+*.db-wal
+dump.rdb
+
+# Archives & Binaries
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.dll
+*.pdb
+*.so
+
+# ------------------
+# Logs & Temporary Files
+# ------------------
+# Logs
+*.log
+[Ll]og/
+[Ll]ogs/
+logs/
+application*.log
+kengi-idiomas*.log
+api*.log
+dev-debug.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.backup
+*.orig
+.tmp/
+temp/
+
+# ------------------
+# Test Results & Reports
+# ------------------
+test-results/
+coverage-reports/
+*.junit.xml
+e2e-results.json
+
+# Vitest configs
+vitest.config.integration.js
+vitest.config.unit.js
+
+# Playwright configs
+playwright.config*.js
+
+# ------------------
+# Cloud & Deployment
+# ------------------
+# Azure
+.azure/
+*.pubxml*
+*.PublishSettings
+publish-profile*.xml
+new-publish-profile.xml
+AZURE_APPLICATION_INSIGHTS_SETUP.md
+deploy-azure.*
+**/PublishProfiles/
+
+# AWS
+.aws/
+aws-exports.js
+
+# Vercel
+.vercel/
+# Exceção: garantir versionamento do arquivo de configuração de deploy
+!vercel.json
+
+# Netlify
+.netlify/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Vite
+vite.config.ts.timestamp-*.js
+vite.config.ts.timestamp-*.mjs
+
+# Performance analysis
+.lighthouseci/
+*.lighthouseci.json
+
+# ------------------
+# Project Specific Files
+# ------------------
+# Documentation (development only)
+docs/
+informations/
+sprints/
+
+# Web configuration backups
+web.config.backup
+*.config.backup
+
+# Project specific images
+Pag. comunidade.png
+
+# Test and development files
+test-*.js
+test-format.js
+test-results/
+tests-examples/
+
+# Especifics
+application.properties
+application.yml
+run-app.bat
+run-dev.cmd
+setup-mongo-user.ps1
+nul
+.classpath
+.classpath.json
+.project
+.project.json
+
+# Todo2 - AI-powered task management directories
+.cursor/rules/todo2*.mdc
+.cursor/rules/todo2-overview.mdc
+.cursor/rules/todo2.mdc
+.cursor/mcp.json
+.cursor/mcp-local.json
+.todo2/
+
+# Storybook
+*storybook.log
+storybook-static
+storybook.log
+migration-storybook.log
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# AI Development Tools
+PRD.md
+.clinerules/byterover-rules.md
+.kilocode/rules/byterover-rules.md
+.roo/rules/byterover-rules.md
+.windsurf/rules/byterover-rules.md
+.cursor/rules/byterover-rules.mdc
+.kiro/steering/byterover-rules.md
+.qoder/rules/byterover-rules.md
+.augment/rules/byterover-rules.md
+.vercel
