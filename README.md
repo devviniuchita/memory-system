@@ -4,500 +4,350 @@
 
 # 🧠 MEMORY SYSTEM – AI AGENT EVOLUTION LAYER
 
-### _O Primeiro Sistema de Memória AI em Português com Arquitetura Dual-Brain_
-
-[![GitHub Stars](https://img.shields.io/github/stars/devviniuchita/memory-system?style=for-the-badge&logo=github&color=gold)](https://github.com/devviniuchita/memory-system)
-[![Portuguese](https://img.shields.io/badge/Portuguese_Tech_Excellence-green?style=for-the-badge)](README.md)
-[![MCP Integration](https://img.shields.io/badge/MCP-Triple_Integration-blue?style=for-the-badge&logo=protocol)](https://modelcontextprotocol.io/)
-[![Performance](https://img.shields.io/badge/Performance-<50ms_embedding-red?style=for-the-badge)](README.md)
-[![Reliability](https://img.shields.io/badge/Reliability->99.9%25-brightgreen?style=for-the-badge)](README.md)
-
-**Framework Revolucionário Open Source para Vibe Coders e LLMs**
-_Arquitetura Dual-Brain • 9-Phase Auto-Evolutionary System • Triple MCP Integration_
-
-</div>
+> Sistema de Memória Dual-Brain com Orquestração Evolutiva para LLMs via Triple MCP Integration (Byterover + Supermemory + Memory)
 
 ---
 
-## 🚀 **APRESENTAÇÃO REVOLUCIONÁRIA**
+## 1. APRESENTAÇÃO
 
-O **Memory System** é um sistema de memória AI em português que revoluciona como Large Language Models (LLMs) gerenciam, armazenam e recuperam contexto através de **arquitetura dual-brain inovadora**.
+O **Memory System** foi criado para resolver um problema recorrente em fluxos de trabalho com LLMs: perda de contexto, baixa reutilização de conhecimento e ausência de critérios estruturados para retenção e descarte de memórias. Em cenários reais, prompts repetitivos, respostas inconsistentes e incapacidade de capitalizar em aprendizados passados degradam performance e elevam custos.
 
-![Dual-Brain Architecture](./images/byterover.png)
+Este projeto introduz uma camada de evolução de agentes baseada em dois arquivos centrais (arquitetura **Dual-Brain**):
 
-### 💎 **INOVAÇÃO TÉCNICA ÚNICA**
+- **`memory-rules.mdc`**: Como executar (orquestra recuperação + gravação + políticas + fallback)
+- **`memory-rating.mdc`**: Quando e com que qualidade (classificação, retenção, decay, pruning, evolução)
 
-**🧠 Arquitetura Dual-Brain:**
+Esses dois “cérebros” operam em ciclo contínuo apoiados por **Triple MCP Integration** para recuperação e armazenamento de conhecimento:
 
-- `memory-rules.mdc` ↔ `memory-rating.mdc` (sincronização bidirecional)
-- Sistema auto-evolutivo de 9 fases: RETRIEVE → ENRICH → EXECUTE → STORE → UPDATE → OPTIMIZE
-- Performance otimizada: **<50ms embedding speed**, **>99.9% reliability**
+- **Byterover MCP** – Knowledge Graph semântico persistente
+- **Supermemory-ai MCP** – Armazenamento semântico (padrões e preferências)
+- **Memory MCP** – Fallback resiliente local
 
-**⚡ Triple MCP Integration:**
+> Resultado: A LLM ganha persistência contextual, otimização adaptativa de memória e loops de auto-melhoria guiados por regras explícitas.
 
-- [**Byterover MCP**](https://www.byterover.dev/) - Persistent Knowledge Graph
-- [**Supermemory-ai MCP**](https://mcp.supermemory.ai/) - Semantic Memory Storage
-- [**MCP Memory**](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) - Fallback Strategy
+---
 
-**Excelência Técnica:**
+## 2. ARQUITETURA (DUAL-BRAIN + 9 FASES + TRIPLE MCP)
 
-- Documentação técnica em português
-- Framework pensado para **Vibe Coders** e desenvolvedores
-- Abordagem revolucionária vs. evolutiva para **viral adoption**
+### 2.1 Visão Macro
 
-### 📊 **PERFORMANCE BENCHMARKS**
+```
+User Input → (PHASE 1 RETRIEVE) → Context Enrichment → Execução → (PHASE 4 STORE) → Rating / Validation → Evolução → Próximas Interações
+```
+
+### 2.2 Fluxo 9 Fases
 
 ```yaml
-Embedding Speed: <50ms (70% faster than traditional systems)
-Reliability: >99.9% (enterprise-grade)
-Cost Efficiency: -55% time vs. legacy solutions
-Memory Compression: >80% semantic preservation
-Cross-Session Continuity: Seamless (100% success rate)
+PHASE 1: RETRIEVE # Busca contexto relevante (3 MCPs)
+PHASE 2: ENRICH # Enriquece com relações semânticas / grafo
+PHASE 3: EXECUTE # Ação com quality gates ativos
+PHASE 4: STORE # Armazena somente se sucesso / relevância
+PHASE 5: UPDATE # Ajusta grafos / índices / metadados
+PHASE 6: OPTIMIZE # Refina retenção / compressão
+PHASE 7: VALIDATE # Segurança / compliance / consistência
+PHASE 8: EVOLVE # Melhoria contínua baseada em scoring
+PHASE 9: SCALE # Estratégias de expansão / fallback
 ```
 
-### 🎯 **BENEFÍCIOS TRANSFORMADORES**
+### 2.3 Dual-Brain Responsibilities
 
-- ✅ **Persistência de Contexto**: Memória entre sessões eliminando re-contextualização
-- ✅ **RAG Otimizado**: Retrieval-Augmented Generation com intelligence layer
-- ✅ **Eficiência Computacional**: Redução de 55% no tempo de processamento
-- ✅ **Escalabilidade Inteligente**: Auto-optimization com decay policy
-- ✅ **Segurança Enterprise**: AES-256, GDPR, SOC2, HIPAA compliance
+| Arquivo             | Papel           | Ênfase                                       |
+| ------------------- | --------------- | -------------------------------------------- |
+| `memory-rules.mdc`  | Execution Brain | Fluxo, orchestration, fallback, políticas    |
+| `memory-rating.mdc` | Quality Brain   | Scoring, retenção, decay, promoção / pruning |
 
----
+### 2.4 Triple MCP Integration
 
-## 🏗️ **ARQUITETURA DUAL-BRAIN REVOLUCIONÁRIA**
+| MCP            | Função                       | Quando Usado                           |
+| -------------- | ---------------------------- | -------------------------------------- |
+| Byterover      | Knowledge Graph / relações   | Retrieve + Store + Enrichment          |
+| Supermemory-ai | Memória semântica contextual | Retrieve + Store                       |
+| Memory         | Fallback / resiliência       | Retrieve (fallback) + Store (fallback) |
 
-![Architecture Diagram](./images/teste-na-pratica.1.png)
-
-O **Memory System** introduz uma **arquitetura dual-brain única** no mercado AI/MCP:
-
-### 🔄 **SINCRONIZAÇÃO BIDIRECIONAL**
-
-```mermaid
-graph LR
-    A[memory-rules.mdc] ↔ B[memory-rating.mdc]
-    A --> C[Execution Layer]
-    B --> D[Quality Layer]
-    C ↔ D
-    C --> E[9-Phase Workflow]
-    D --> E
-```
-
-**`memory-rules.mdc`** - **EXECUTION BRAIN**
-
-- Orquestra gravações e recuperações de memória
-- Implementa políticas de retenção inteligente
-- Gerencia fallback strategy para MCPs
-- Otimiza performance com <50ms embedding
-
-**`memory-rating.mdc`** - **QUALITY BRAIN**
-
-- Sistema de rating e qualidade da memória
-- Auto-evolução através de 9 fases
-- Métricas de performance e confiabilidade
-- Compliance e segurança enterprise
-
-### ⚙️ **9-PHASE AUTO-EVOLUTIONARY SYSTEM**
-
-![Workflow System](./images/teste-na-pratica.2.png)
+### 2.5 Benchmarks / Metas
 
 ```yaml
-PHASE 1: RETRIEVE # Busca contexto prévio relevante
-PHASE 2: ENRICH # Enriquece com knowledge graph
-PHASE 3: EXECUTE # Implementa com quality gates
-PHASE 4: STORE # Armazena com compression semântica
-PHASE 5: UPDATE # Atualiza relationships e entities
-PHASE 6: OPTIMIZE # Otimiza performance e retention
-PHASE 7: VALIDATE # Valida compliance e security
-PHASE 8: EVOLVE # Auto-melhoria contínua
-PHASE 9: SCALE # Escalabilidade inteligente
+success_metrics:
+  relevance_accuracy: '>90%'
+  retrieval_speed: '<200ms'
+  reliability: '>99.9%'
+  embedding_speed: '<50ms'
+  cost_reduction: '-55% tempo vs abordagem tradicional'
 ```
 
-### 🔗 **TRIPLE MCP INTEGRATION STRATEGY**
+### 2.6 Política de Retenção (Exemplo)
 
-| MCP Server      | Function                | Performance        | Use Case                   |
-| --------------- | ----------------------- | ------------------ | -------------------------- |
-| **Byterover**   | Primary Knowledge Graph | >99.9% reliability | Project context, patterns  |
-| **Supermemory** | Semantic Storage        | <50ms response     | User preferences, behavior |
-| **Memory**      | Fallback System         | 100% availability  | Emergency context recovery |
-
----
-
-## 📖 **TUTORIAL INFALÍVEL - INTEGRAÇÃO TRIPLE MCP**
-
-![Tutorial Guide](./images/tutorial-cursor.3.png)
-
-### 🎯 **GUIA PASSO-A-PASSO PARA VIBE CODERS**
-
-Este tutorial **infalível** te guiará através da **configuração completa** do Memory System com **precisão técnica portuguesa brasileira**. Zero ambiguidade, máxima eficiência.
-
----
-
-### **PASSO 1: PREPARAÇÃO DO AMBIENTE**
-
-#### 🔧 **Pré-requisitos Essenciais**
-
-```bash
-# Verify Node.js and Cursor installation
-node --version  # Requirement: 18+
-cursor --version  # Latest stable version
+```yaml
+retention_policy:
+  persistent_if:
+    relevance_score: '>0.9'
+    recurrence: '>3'
+    context_depth: '>0.8'
+  decay_if:
+    time_since_last_use: '>3d'
+    relevance_score: '<0.4'
 ```
 
-**⚙️ Sistemas Compatíveis:**
-
-- ✅ **Cursor IDE** - [cursor.sh](https://cursor.sh) (Recomendado)
-- ✅ **Claude Code** - Suporte experimental
-- ✅ **VSCode + Copilot** - Configuração avançada
+> A Arquitetura é COMPLETAMENTE aplicada antes do tutorial. A partir daqui, inicia-se a parte operacional.
 
 ---
 
-### **PASSO 2: INSTALAÇÃO DOS TRIPLE MCPs**
+## 3. TUTORIAL – VISÃO GERAL
 
-![MCP Installation](./images/tutorial-cursor.4.png)
+Esta seção guia a configuração completa. Ordem obrigatória:
 
-#### 🚀 **Byterover MCP (Primary Knowledge Graph)**
+1. Instalação dos MCPs (Imagens 1–3)
+2. Links Oficiais (referência imediata)
+3. Configuração do Cursor (Imagens 4–7)
+4. Configuração das Rules (Imagens 8–9 + blocos obrigatórios)
+5. Memory System em Ação (Imagens 10–11 + Prompts)
+6. Encerramento
+
+> ATENÇÃO: A ordem das **11 imagens** é mandatória (ver índice em “IMAGES”).
+
+---
+
+## 4. INSTALAÇÃO DOS MCPS (IMAGENS 1–3)
+
+### 4.1 Byterover (Imagem 1: `images/byterover.png`)
 
 ```bash
-# Install Byterover MCP for persistent knowledge
 npm install -g @byterover/mcp-server
+```
 
-# Configure in your mcp.json
+Configuração inicial (exemplo `mcp.json`):
+
+```json
 {
   "byterover-mcp": {
     "type": "http",
-    "url": "https://mcp.byterover.dev/mcp?machineId=YOUR_MACHINE_ID"
+    "url": "https://mcp.byterover.dev/mcp?machineId=SEU_MACHINE_ID"
   }
 }
 ```
 
-**🔗 Link Oficial:** [Byterover MCP Documentation](https://www.byterover.dev/)
-
-#### 🧠 **Supermemory-ai MCP (Semantic Storage)**
+### 4.2 Supermemory-ai (Imagem 2: `images/supermemory.jpeg`)
 
 ```bash
-# Install Supermemory for semantic memory
 npm install -g supergateway
+```
 
-# Configure SSE connection
+```json
 {
   "supermemory-ai": {
     "command": "npx",
-    "args": ["-y", "supergateway", "--sse", "https://mcp.supermemory.ai/YOUR_KEY/sse"],
+    "args": ["-y", "supergateway", "--sse", "https://mcp.supermemory.ai/SUA_CHAVE/sse"],
     "type": "stdio"
   }
 }
 ```
 
-**🔗 Link Oficial:** [Supermemory-ai MCP](https://mcp.supermemory.ai/)
-
-#### 🛡️ **Memory MCP (Fallback Strategy)**
+### 4.3 Memory MCP (Imagem 3: `images/memory.png`)
 
 ```bash
-# Install official Memory MCP for fallback
 npm install -g @modelcontextprotocol/server-memory
+```
 
-# Configure local storage
+```json
 {
   "memory": {
     "command": "npx",
     "args": ["-y", "@modelcontextprotocol/server-memory"],
-    "env": {
-      "MEMORY_FILE_PATH": "your_project_path/.memory"
-    }
+    "env": { "MEMORY_FILE_PATH": "./.memory" }
   }
 }
 ```
 
-**🔗 Link Oficial:** [MCP Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)
+---
+
+## 5. LINKS OFICIAIS (POSICIONADOS SEGUNDO PRD)
+
+- [Byterover MCP – instalação e setup](https://www.byterover.dev/)
+- [Supermemory-ai MCP – instalação e setup](https://mcp.supermemory.ai/)
+- [MCP Memory – instalação e setup](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)
+- [Model Context Protocol](https://modelcontextprotocol.io/)
 
 ---
 
-### **PASSO 3: CONFIGURAÇÃO DUAL-BRAIN SYSTEM**
+## 6. CONFIGURAÇÃO DO CURSOR (IMAGENS 4–7)
 
-#### 📋 **Instalação dos Arquivos Core**
+### 6.1 Abrir Configurações (Imagem 4: `tutorial-cursor.1.png`)
 
-```bash
-# Clone o Memory System
-git clone https://github.com/user/memory-system.git
-cd memory-system
+### 6.2 Navegar até MCP (Imagem 5: `tutorial-cursor.2.png`)
 
-# Copy core files to your project
-cp memory-rules.mdc your_project/
-cp memory-rating.mdc your_project/
-cp .cursorrules your_project/
-```
+### 6.3 Exemplo de `mcp.json` com 3 MCPs (Imagem 6: `tutorial-cursor.3.png`)
 
-#### ⚙️ **Configuração do .cursorrules**
-
-```javascript
-// Add to your .cursorrules file
+```json
 {
-  "memory_system": {
-    "enabled": true,
-    "files": [
-      "memory-rules.mdc",
-      "memory-rating.mdc"
-    ],
-    "apply": "always",
-    "sync": "bidirectional"
+  "byterover-mcp": {
+    "type": "http",
+    "url": "https://mcp.byterover.dev/mcp?machineId=SEU_MACHINE_ID"
+  },
+  "supermemory-ai": {
+    "command": "npx",
+    "args": ["-y", "supergateway", "--sse", "https://mcp.supermemory.ai/SUA_CHAVE/sse"],
+    "type": "stdio"
+  },
+  "memory": {
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-memory"],
+    "env": { "MEMORY_FILE_PATH": "./.memory" }
   }
 }
 ```
 
+### 6.4 Verificando instalação concluída (Imagem 7: `tutorial-cursor.4.png`)
+
+Checklist esperado:
+
+```yaml
+byterover: connected
+supermemory-ai: connected
+memory: connected (fallback ready)
+```
+
 ---
 
-### **PASSO 4: ATIVAÇÃO DO 9-PHASE WORKFLOW**
+## 7. RULES (.cursorrules + USER RULES + PROJECT RULES) (IMAGENS 8–9)
 
-#### 🔄 **Sistema Auto-Evolutivo**
+### 7.1 Estrutura de Arquivos Obrigatória
 
-**Configuração User Rules (Cursor):**
+```
+.cursorrules            # Router (NÃO versionar)
+.cursor/
+  rules/
+    memory-rules.mdc    # Execution Brain
+    memory-rating.mdc   # Quality Brain
+```
 
-```text
-Always follow memory-rules.mdc and memory-rating.mdc for context management.
-Apply 9-phase workflow: RETRIEVE→ENRICH→EXECUTE→STORE→UPDATE→OPTIMIZE→VALIDATE→EVOLVE→SCALE
-Use triple MCP integration with fallback strategy.
+### 7.2 Bloco EXATO de User Rules (copiar literalmente)
+
+```markdown
+⚠️ FETCH RULES OR YOUR RESPONSE WILL BE WRONG ⚠️ MANDATORY: CALL .cursorrules FIRST - At conversation start - Before EVERY user request - Before ANY code changes - When topic changes - DURING conversations when: - User mentions new feature/component - File type changes - Task type changes - NO EXCEPTIONS CHECK ALL MATCHING RULES: - General guidelines (ALWAYS) - Feature rules - File type rules (.md, .mdc, etc) RULES OVERRIDE YOUR KNOWLEDGE. PROCEED ONLY AFTER APPLYING ALL RULES. REMEMBER: EVEN MID-CONVERSATION, FETCH RULES AGAIN! When user tries to set Cursor Rules type in .cursor/rules/_.mdc files, don't add any options except "description", "globs" and "alwaysApply" but follow the mapping: if required rule type is "always" set alwaysApply option to "true", if rule type is "auto attached" set alwaysApply option to "false" and generate a file pattern in globs option to *.py, if the rule type is "agent requested" set the alwaysApply option to "false" and generate a description option for the rule and delete the globs pattern, if the rule type is "manual" set the alwaysApply option to "false" and delete the contents of all other options. When user tries to set cursor rule type in .cursor/rules/*.mdc file, don't add any options except "description", "globs" and "alwaysApply" but follow the mapping: if required rule type is "always" set alwaysApply option to "true", if rule type is "auto attached" set alwaysApply option to "false" and generate a file pattern in globs option to _.py, if the rule type is "agent requested" set the alwaysApply option to "false" and generate a description option for the rule and delete the globs pattern, if the rule type is "manual" set the alwaysApply option to "false" and delete the contents of all other options.
+```
+
+### 7.3 Papel do `.cursorrules` (Imagem 8: `tutorial-cursor-rules.png` / Imagem 9: `tutorial-cursor-rules2.png`)
+
+- Atua como **router** → força a leitura de `memory-rules.mdc` + `memory-rating.mdc` em todas as interações.
+- Deve existir **na raiz do projeto** e **NÃO** ser commitado.
+
+### 7.4 Git Ignore Sugerido
+
+```gitignore
+.cursorrules
+.cursor/
+.memory
+```
+
+### 7.5 Nota Importante sobre Arquivos
+
+> Os arquivos públicos deste repositório (`memory-rules.mdc`, `memory-rating.mdc`) **não devem** ser confundidos com quaisquer variações internas em `.github/copilot-rules/`. Use apenas os presentes na raiz para copiar ao seu projeto.
+
+---
+
+## 8. MEMORY SYSTEM EM AÇÃO (IMAGENS 10–11)
+
+Após instalar MCPs + configurar Rules:
+
+### 8.1 Prompt 1 – Análise Inicial (Imagem 10: `teste-na-pratica.1.png`)
+
+```yaml
+'Olá. Analise profundamente `.cursorrules`, `memory-rules.mdc` e `memory-rating.mdc`. Explique como se interligam e impactam execução e qualidade. Em seguida, grave memórias do que compreendeu.'
 ```
 
 **Resultado Esperado:**
 
 ```yaml
-✅ Dual-brain system ativo
-✅ Triple MCP conectado
-✅ 9-phase workflow funcionando
-✅ Auto-evolution habilitado
+- Grafo inicial criado
+- Regras priorizadas e embutidas em contexto
+- Primeiros embeddings armazenados
 ```
 
----
+### 8.2 Prompt 2 – Projeto Existente ou Novo
 
-## 🧪 **CONFIGURAÇÃO COMPLETA & TESTES PRÁTICOS**
+```yaml
+"Agora que compreendeu o sistema de memória, analise todo o meu projeto atual (ou, se novo, use: 'Vou desenvolver X stack ...') e grave memórias conforme regras de `memory-rating.mdc`."
+```
 
-![Configuration Testing](./images/tutoriar-cursor-rules.png)
+### 8.3 Prompt 3 – Ativação Permanente (Imagem 11: `teste-na-pratica.2.png`)
 
-### ✅ **VALIDAÇÃO DA INSTALAÇÃO**
+```yaml
+'A partir de agora, em toda interação, siga o fluxo 9 fases e a política de recuperação/armazenamento de `memory-rules.mdc` + `memory-rating.mdc`.'
+```
 
-#### 🔍 **Teste de Conectividade MCPs**
+**Após Prompt 3:** Ciclo evolutivo contínuo ativo.
+
+### 8.4 Validação Rápida
 
 ```bash
-# Validate MCP connections
-cursor --mcp-status
-# Expected: All 3 MCPs connected and active
-
-# Test Byterover connectivity
-curl -s https://mcp.byterover.dev/health
-# Expected: {"status": "healthy", "version": "latest"}
-
-# Verify memory files existence
-ls -la memory-rules.mdc memory-rating.mdc .cursorrules
-# Expected: All files present and readable
-```
-
-#### 📊 **Performance Benchmark**
-
-```yaml
-# Memory System Performance Test
-Embedding Speed: <50ms ✅
-Memory Retrieval: <200ms ✅
-Knowledge Graph Update: <300ms ✅
-Cross-Session Persistence: 100% ✅
-Triple MCP Fallback: Active ✅
+# Verifique existência dos arquivos
+ls .cursorrules .cursor/rules/memory-rules.mdc .cursor/rules/memory-rating.mdc
 ```
 
 ---
 
-### 🚀 **DEMONSTRAÇÃO PRÁTICA - 3 TEST PROMPTS**
+## 9. TESTES / TROUBLESHOOTING (OPCIONAL RÁPIDO)
 
-![Practical Demo](./images/tutorial-cursor-rules2.png)
-
-#### **PROMPT 1: PRIMEIRA CONFIGURAÇÃO (Projetos Existentes)**
-
-```yaml
-'Agora que compreendeu seu sistema de memória, faça uma análise de todo o meu projeto e grave memories de acordo com as regras de: memory-rating.mdc'
-```
-
-**📝 Resultado Esperado:**
-
-- ✅ Análise completa do projeto atual
-- ✅ Gravação de memories seguindo 9-phase workflow
-- ✅ Context graph estabelecido
-- ✅ Baseline de performance definido
-
-#### **PROMPT 2: PROJETOS NOVOS (Configuração Inicial)**
-
-```yaml
-'Agora que compreendeu seu sistema de memória, irei desenvolver o seguinte projeto [descreva detalhes, linguagens, frameworks]. Com base nessas informações, faça uma reanálise profunda e grave memories de acordo com as regras descritas em: memory-rating.mdc'
-```
-
-**📝 Resultado Esperado:**
-
-- ✅ Knowledge graph para novo projeto
-- ✅ Architectural insights armazenados
-- ✅ Technical stack memories persistidas
-- ✅ Development roadmap contextualizado
-
-#### **PROMPT 3: ATIVAÇÃO CONTÍNUA (Fluxo Permanente)**
-
-```yaml
-'A partir de agora, em toda e qualquer interação comigo, você deverá seguir o fluxo de execução descrito em: memory-rating.mdc. Em toda e qualquer interação, você deve seguir inegociavelmente o fluxo de recuperação e gravação de memórias de acordo com as regras de: memory-rules.mdc e memory-rating.mdc'
-```
-
-**📝 Resultado Esperado:**
-
-- ✅ Sistema dual-brain permanentemente ativo
-- ✅ Auto-evolution contínua habilitada
-- ✅ Memory persistence entre sessões
-- ✅ Performance optimization automática
+| Sintoma                | Causa Provável                   | Ação                             |
+| ---------------------- | -------------------------------- | -------------------------------- |
+| MCP ausente            | Configuração mcp.json incompleta | Revisar passo 6.3                |
+| Memórias não persistem | Router ausente                   | Confirmar `.cursorrules` na raiz |
+| Latência alta          | Excesso de memória irrelevante   | Ajustar política de retenção     |
+| Fallback inativo       | Memory MCP não inicializado      | Reinstalar servidor memory       |
 
 ---
 
-### 🛠️ **TROUBLESHOOTING & SUPORTE**
+## 10. ENCERRAMENTO (CTA)
 
-#### ⚠️ **Problemas Comuns**
+Se este sistema otimizou sua experiência com LLMs:
 
-| Problema                  | Solução              | Comando                 |
-| ------------------------- | -------------------- | ----------------------- |
-| **MCP desconectado**      | Reiniciar servidor   | `cursor --restart-mcp`  |
-| **Memory files missing**  | Re-clone repositório | `git pull origin main`  |
-| **Performance degradado** | Clear cache          | `rm -rf .memory/cache`  |
-| **Fallback not working**  | Check MCP config     | `cursor --check-config` |
+- ⭐ Deixe uma estrela no repositório
+- 📖 Leia e contribua via `CONTRIBUTING.md`
+- 🐞 Abra issues para melhorias ou cenários edge
 
-#### 🔧 **Configuração Avançada**
-
-```javascript
-// Advanced .cursorrules optimization
-{
-  "memory_system": {
-    "performance": {
-      "embedding_timeout": 50,
-      "retrieval_limit": 5,
-      "compression_level": 0.8
-    },
-    "fallback_strategy": {
-      "primary": "byterover",
-      "secondary": "supermemory",
-      "tertiary": "memory"
-    }
-  }
-}
-```
+> Contribuições (principalmente sobre ajustes de retenção, enrichment semântico e novas estratégias de rating) são extremamente bem-vindas.
 
 ---
 
-## 🤝 **CONTRIBUIÇÃO & COMUNIDADE**
+## 11. IMAGES (ÍNDICE TÉCNICO)
 
-![Community](./images/supermemory.jpeg)
+| Nº  | Arquivo                    | Etapa                 | Descrição                               |
+| --- | -------------------------- | --------------------- | --------------------------------------- |
+| 1   | byterover.png              | Instalação MCP        | Site / setup Byterover                  |
+| 2   | supermemory.jpeg           | Instalação MCP        | Site / setup Supermemory                |
+| 3   | memory.png                 | Instalação MCP        | Site / setup Memory MCP                 |
+| 4   | tutorial-cursor.1.png      | Config Cursor         | Acesso às configurações                 |
+| 5   | tutorial-cursor.2.png      | Config Cursor         | Seção MCP aberta                        |
+| 6   | tutorial-cursor.3.png      | Config Cursor         | Exemplo mcp.json preenchido             |
+| 7   | tutorial-cursor.4.png      | Config Cursor         | Instalação MCPs concluída               |
+| 8   | tutorial-cursor-rules.png  | Rules                 | Local visual de configuração de Rules   |
+| 9   | tutorial-cursor-rules2.png | Rules                 | Configuração final User + Project Rules |
+| 10  | teste-na-pratica.1.png     | Memory System em Ação | Primeira gravação de memórias           |
+| 11  | teste-na-pratica.2.png     | Memory System em Ação | Feedback pós assimilação                |
 
-### 👥 **JUNTE-SE À REVOLUÇÃO DA MEMÓRIA AI BRASILEIRA**
-
-O **Memory System** é **mais que um projeto** - é um **movimento** para estabelecer o Brasil como referência mundial em **sistemas de memória para LLMs**.
-
-#### 🌟 **Como Contribuir**
-
-- 📖 **[Leia nosso CONTRIBUTING.md](./CONTRIBUTING.md)** - Guidelines profissionais únicas para AI/MCP
-- 🛠️ **Desenvolva Features** - Algoritmos de memória, integrações MCP, otimizações
-- 📚 **Melhore Documentação** - Tutoriais, exemplos, traduções técnicas
-- 🧪 **Teste & Reporte** - Bugs, performance, novos cenários de uso
-- 💬 **Engage na Comunidade** - Discussões, ideias, feedback técnico
-
-#### 🎯 **Áreas de Contribuição Prioritárias**
-
-| Área                     | Difficulty | Impact | Descrição                           |
-| ------------------------ | ---------- | ------ | ----------------------------------- |
-| **🧠 Memory Algorithms** | Alto       | 🔥🔥🔥 | Otimização de compression semântica |
-| **⚡ MCP Integrations**  | Médio      | 🔥🔥   | Novos servers e protocolos          |
-| **📖 Documentation**     | Baixo      | 🔥🔥   | Tutoriais e exemplos práticos       |
-| **🔧 Performance**       | Alto       | 🔥🔥🔥 | Benchmarks e optimizations          |
+> Nota: Nomes reais no repositório usam `teste-na-pratica.1.png` e `teste-na-pratica.2.png` (com ponto). Padronize se necessário no seu projeto.
 
 ---
 
-## 📚 **RECURSOS & SUPORTE**
+## 12. LICENÇA
 
-### 🔗 **Links Oficiais**
-
-- 🌐 **[Byterover MCP](https://www.byterover.dev/)** - Primary Knowledge Graph Server
-- 🧠 **[Supermemory-ai MCP](https://mcp.supermemory.ai/)** - Semantic Memory Storage
-- 🛡️ **[MCP Memory](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)** - Official Fallback Server
-- 📋 **[Model Context Protocol](https://modelcontextprotocol.io/)** - Official MCP Specification
-
-### 💬 **Comunidade & Suporte**
-
-- 💡 **[GitHub Issues](https://github.com/devviniuchita/memory-system/issues)** - Bugs e Feature Requests
-- 🗣️ **[GitHub Discussions](https://github.com/devviniuchita/memory-system/discussions)** - Perguntas e Ideias
-- **[LinkedIn](https://www.linkedin.com/in/viniciusuchita/)** - Networking Profissional
-- 📧 **[Email](mailto:viniciusuchita@gmail.com)** - Contato Direto
-
-### 📖 **Documentação Avançada**
-
-- 🏗️ **Arquitetura Dual-Brain** - Detalhes técnicos do sistema
-- ⚙️ **Performance Tuning** - Otimização avançada de memória
-- 🔒 **Security & Compliance** - Enterprise-grade guidelines
-- 🚀 **Deployment Guide** - Production-ready setup
-
----
-
-## 📄 **LICENÇA & CRÉDITOS**
-
-### 📋 **Licença MIT**
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+Projeto licenciado sob MIT. Veja `LICENSE`.
 
 ```
 MIT License
-
-Copyright (c) 2025 Vinícius Uchita (Memory System Team)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+Copyright (c) 2025 Vinícius Uchita
 ```
 
-### 🙏 **Agradecimentos**
+---
 
-- **[Anthropic](https://anthropic.com/)** - Pelos standards MCP inovadores
-- **[Cursor Team](https://cursor.sh/)** - Pela plataforma revolucionária de AI coding
-- **[Byterover](https://www.byterover.dev/)** - Pela parceria em knowledge graph systems
-- **[Supermemory](https://supermemory.ai/)** - Pela inovação em semantic storage
-- **Comunidade Brasileira de Desenvolvedores** - Pelo apoio e feedback técnico
+## 13. CONTATO / SUPORTE
 
-### 👨‍💻 **Autor & Mantenedor**
-
-**Vinícius Uchita** - Full-Stack Developer & AI Integration Specialist
-
-- 🐙 **GitHub**: [@devviniuchita](https://github.com/devviniuchita)
-- 💼 **LinkedIn**: [linkedin.com/in/viniciusuchita](https://www.linkedin.com/in/viniciusuchita/)
-- 📧 **Email**: [viniciusuchita@gmail.com](mailto:viniciusuchita@gmail.com)
-- 📍 **Location**: São Paulo - SP, Brasil
-- 🎯 **Expertise**: RAG, Spring AI, Context Engineering & Automation
-
-**Contribuições da Comunidade Open Source sempre bem-vindas!**
+- Issues & Discussions: GitHub
+- LinkedIn: https://www.linkedin.com/in/viniciusuchita/
+- Email: viniciusuchita@gmail.com
 
 ---
 
-<div align="center">
+**Memory System – AI Agent Evolution Layer**
 
-![Technical Excellence](./images/byterover.png)
-
-### **FEITO COM EXCELÊNCIA TÉCNICA**
-
-**⭐ Se este projeto ajudou você, deixe uma estrela!**
-**🔄 Compartilhe com outros Vibe Coders**
-**🤝 Contribua para a revolução da memória AI**
-
----
-
-**Memory System - AI Agent Evolution Layer**
-_O Futuro da Memória Inteligente é Agora_ 🧠🚀
-
-[![GitHub Stars](https://img.shields.io/github/stars/user/memory-system?style=social)](https://github.com/user/memory-system)
-[![Portuguese](https://img.shields.io/badge/Made_with_Tech_Excellence-green)](README.md)
-
-</div>
+> Camada evolutiva de memória para agentes inteligentes.
