@@ -245,7 +245,7 @@ memory: connected (fallback ready)
 
 ---
 
-## 8. MEMORY SYSTEM EM AÇÃO (IMAGENS 10–11)
+## 8. Memory System em Ação (IMAGENS 10–11)
 
 Após instalar MCPs + configurar Rules:
 
