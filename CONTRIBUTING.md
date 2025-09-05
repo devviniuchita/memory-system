@@ -22,6 +22,27 @@ Estamos criando um mundo onde sistemas de IA nunca esquecem, aprendem continuame
 
 ---
 
+## 📜 **Governança & Regras de Contribuição**
+
+Antes de contribuir, é essencial conhecer nossas políticas de governança:
+
+<div align="center">
+
+| Documento | Descrição | Link |
+|-----------|-----------|------|
+| **🤝 Código de Conduta** | Todos os contribuidores devem seguir nossos padrões de comportamento respeitoso e inclusivo | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) |
+| **🔒 Segurança** | Vulnerabilidades devem ser reportadas de forma responsável através dos canais apropriados | [SECURITY.md](./SECURITY.md) |
+| **👥 Responsáveis** | PRs em áreas críticas (regras de memória, configurações principais) requerem aprovação dos code owners designados | [CODEOWNERS](./CODEOWNERS) |
+
+</div>
+
+**Pontos importantes:**
+- 🤝 **Respeito**: Todos os contribuidores devem aderir ao nosso Código de Conduta para manter um ambiente colaborativo e inclusivo.
+- 🔒 **Responsabilidade**: Questões de segurança devem ser reportadas através dos canais oficiais descritos em SECURITY.md, nunca publicamente.
+- 👥 **Aprovação**: Pull requests que afetam componentes críticos (memory-rules.mdc, .cursorrules, configurações MCP) passam por revisão obrigatória dos code owners.
+
+---
+
 ## 🤝 **Como Contribuir**
 
 ### 🐛 **Reportando Bugs**

@@ -1,0 +1,17 @@
+# 🔒 CODEOWNERS - Memory System AI Agent Evolution Layer
+# Este arquivo define os responsáveis por revisar e aprovar PRs em áreas críticas do projeto.
+
+# Regras principais das IDEs e de memória
+.cursorrules    @devviniuchita
+memory-rules.mdc @devviniuchita
+memory-rating.mdc @devviniuchita
+
+# Pastas críticas
+/rules/         @devviniuchita
+/docs/          @devviniuchita
+
+# Configurações e workflows
+.github/        @devviniuchita
+
+# Qualquer outro arquivo
+*               @devviniuchita
