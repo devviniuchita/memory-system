@@ -17,25 +17,29 @@ _Sincronização de regras dual-brain_<br>
 _Orquestração tripla de MCPs_<br>
 _Injeção de contexto contínuo_
 
-**📋 Navegação Rápida:** [⚙️ Instalação](#️-instalação) • [🔥 Por que usar o Memory System?](🔥-por-que-usar-o-memory-system-?) • [🎯 Como Usar](#-memory-system-em-ação) • [🧠 Recursos](#-arquitetura-dual-brain) • [🌟 Demo](#-memory-system-em-ação)
+**📋 Navegação Rápida:** [⚙️ Instalação](#instalacao) • [🔥 Por que usar?](#por-que-usar) • [🎯 Como Usar](#como-usar) • [🧠 Recursos](#recursos) • [🌟 Demo](#demo) • [🚀 Em Ação](#em-acao)
 
 </div>
 
 ---
 
+<a id="por-que-usar"></a>
+
 ## 🔥 Por que usar o Memory System?
 
 Modelos de linguagem ou LLMs (Large Language Models) possuem um **número máximo de tokens** que conseguem "lembrar" por vez (ex: 8k, 32k, 128k tokens).
-Interações longas ou contextos muito extensos podem inevitavelmente "ultrapassar esse limite", e na prática ocorre que as mensagens mais antigas são "cortadas ou substituídas". Isso cria um efeito de "decadência de contexto", ou simplesmente um **Decay**, onde as informações do início da conversa simplesmente desaparecem abrindo margem para a tão temida **Alucinação de IA**.<br>
-E como solucionar isso? É aí onde entra o **RAG (Retrieval Augmented Generation)**, que é uma abordagem de IA que permite que os modelos de linguagem sejam capazes de recuperar informações relevantes de fontes ou documentos, aumentando assim os seus contextos. Então com isso chegamos a solução? E a resposta é não! Embora o contexto ajude LLMs de forma mais eficiente, o problema é que eles não são capazes de **reter** informações de forma persistente, ficando assim, "reféns da cola", o que significa que sem essa injeção constante de "cola", eles **esquecem** rapidamente as informações mais antigas e continuam a**decair** seu contexto. E a grande evolução disso foi o que? Os tão revolucionários e famosos **MCPs (Model Context Protocol)**, que são **servidores de contexto que podem ser internos e externos** que permitem que os modelos de linguagem sejam capazes de recuperar informações relevantes de fontes de dados de forma mais dinâmica, além de gerar respostas com base nessas informações, interagir com diversos serviços e com uma recuperação de contexto muito mais rápida e eficiente. <br>
-Aí vem aquela pergunta novamente: É a solução? E em **partes, é sim!** E por que não totalmente? Porque MCP's de memória por exemplo, embora eficazes, sozinhos acabam não sendo "bem aproveitado" pelas IAs, pois elas são **muito específicas** para o contexto em que foram treinadas, o que significa que **ainda não são capazes de generalizar** para outros contextos de forma dinâmica e muito menos **são capazes de filtrar** quais as qualidades dessas memórias que estão sendo armazenados. É aí onde a grande solução, pode se tornar **UM GRANDE PROBLEMA!** Pois se a **IA registra memórias de más qualidades**, ou porventura memórias geradas de **erros**, logo ela irá recuperar **MEMÓRIAS RUINS** e se **BASEAR EM ERROS**.
+Interações longas ou contextos muito extensos podem inevitavelmente "ultrapassar esse limite", e na prática ocorre que as mensagens mais antigas são "cortadas ou substituídas". Isso cria um efeito de "decadência de contexto", ou simplesmente um **Decay**, onde as informações do início da conversa simplesmente desaparecem abrindo margem para a tão temida **Alucinação de IA**.
 
-Foi pensando nisso que desenvolvi o **Memory System**, que funciona como um **Multi Sistema Híbrido** que mescla e integra diferentes formas de injeção de coxtento de forma sinérgica e contínua. Dentre as suas principais funções estão o sistema fallbacks, que mantém o sistema funcionando em caso para falhas, 3 MCPs funcionando em sinergia sob fortes, inflexiveis e seguras regras de Compliance, métricas e requisitos exigentes para memórias gravadas ou não e grande diferencial de todos, que é fluxo de gravação e recuperação contínua baseado em duas etapas, sendo:
+E como solucionar isso? É aí onde entra o **RAG (Retrieval Augmented Generation)**, que é uma abordagem de IA que permite que os modelos de linguagem sejam capazes de recuperar informações relevantes de fontes ou documentos, aumentando assim os seus contextos. Então com isso chegamos a solução? E a resposta é não! Embora o contexto ajude LLMs de forma mais eficiente, o problema é que eles não são capazes de **reter** informações de forma persistente, ficando assim, "reféns da cola", o que significa que sem essa injeção constante de "cola", eles **esquecem** rapidamente as informações mais antigas e continuam a **decair** seu contexto. E a grande evolução disso foi o que? Os tão revolucionários e famosos **MCPs (Model Context Protocol)**, que são **servidores de contexto que podem ser internos e externos** que permitem que os modelos de linguagem sejam capazes de recuperar informações relevantes de fontes de dados de forma mais dinâmica, além de gerar respostas com base nessas informações, interagir com diversos serviços e com uma recuperação de contexto muito mais rápida e eficiente.
+
+Aí vem aquela pergunta novamente: É a solução? E em **partes, é sim!** E por que não totalmente? Porque MCPs de memória por exemplo, embora eficazes, sozinhos acabam não sendo "bem aproveitados" pelas IAs, pois elas são **muito específicas** para o contexto em que foram treinadas, o que significa que **ainda não são capazes de generalizar** para outros contextos de forma dinâmica e muito menos **são capazes de filtrar** quais as qualidades dessas memórias que estão sendo armazenadas. É aí onde a grande solução, pode se tornar **UM GRANDE PROBLEMA!** Pois se a **IA registra memórias de más qualidades**, ou porventura memórias geradas de **erros**, logo ela irá recuperar **MEMÓRIAS RUINS** e se **BASEAR EM ERROS**.
+
+Foi pensando nisso que desenvolvi o **Memory System**, que funciona como um **Multi Sistema Híbrido** que mescla e integra diferentes formas de injeção de contexto de forma sinérgica e contínua. Dentre as suas principais funções estão o sistema fallbacks, que mantém o sistema funcionando em caso de falhas, 3 MCPs funcionando em sinergia sob fortes, inflexíveis e seguras regras de Compliance, métricas e requisitos exigentes para memórias gravadas ou não e grande diferencial de todos, que é fluxo de gravação e recuperação contínua baseado em duas etapas, sendo:
 
 - Pré-tarefa: Recuperação de contexto prévio baseado em memórias persistentes
 - Pós-tarefa: Armazenamento de aprendizados baseado em tarefas bem sucedidas.
 
-Ou seja, o basicamente o sistema garante que **boas memórias sejam armazendas sob fortes condições de segurança, compliance e success_metrics** e que essas mesmas **boas memórias sejam reutilizadas** e **reaproveitadas**, o que torna na prática, um VERDADEIRO **SISTEMA NEURAL de auto-aprendizado contínuo da IAs.**
+Ou seja, basicamente o sistema garante que **boas memórias sejam armazenadas sob fortes condições de segurança, compliance e success_metrics** e que essas mesmas **boas memórias sejam reutilizadas** e **reaproveitadas**, o que torna na prática, um VERDADEIRO **SISTEMA NEURAL de auto-aprendizado contínuo das IAs.**
 
 E tudo isso é possível graças as duas **estrelas** de nosso projeto que executam em sinergia e reforço mútuo, o _dual-brain mode._
 
@@ -46,7 +50,7 @@ Elas são:
 
 RESULTADO - SISTEMA COMPLETO DE:
 
-- **"OQUE" + "COMO" + "QUAL" e "QUANDO"**<br><br>
+- **"O QUE" + "COMO" + "QUAL" e "QUANDO"**<br><br>
 
 ---
 
@@ -79,6 +83,8 @@ RESULTADO - SISTEMA COMPLETO DE:
 ## 🔥 Memory System: A Solução
 
 **Memory System** cria a primeira **camada de memória persistente de IA** que realmente aprende e evolui:
+
+<a id="recursos"></a>
 
 ### 🧠 **Arquitetura Dual-Brain**
 
@@ -142,6 +148,8 @@ RESULTADO - SISTEMA COMPLETO DE:
 </div>
 
 ---
+
+<a id="instalacao"></a>
 
 ## ⚙️ Instalação
 
@@ -283,15 +291,62 @@ Adicione este bloco exato às suas **User Rules** nas configurações do Cursor:
 
 ---
 
+<a id="como-usar"></a>
+
+## 🎯 Como Usar
+
+### 🚀 Quick Start - 90 Segundos
+
+Comece a usar o Memory System em menos de 90 segundos:
+
+```bash
+# 1. Clone e acesse o diretório (10s)
+git clone https://github.com/devviniuchita/memory-system.git
+cd memory-system
+
+# 2. Execute o health check (15s)
+node scripts/healthcheck.mjs
+
+# 3. Configure MCPs no Cursor (30s)
+# - Copie configuração do mcp.json
+# - Verifique MCPs ativos na barra
+
+# 4. Ative as regras (20s)
+# - Copie .cursorrules para raiz do projeto
+# - Coloque .mdc files em .cursor/rules/
+
+# 5. Teste básico (15s)
+# Use o prompt: "Analise as regras de memória e explique o sistema"
+```
+
+✅ **Pronto!** Seu Memory System está operacional.
+
+<a id="demo"></a>
+
+## 🌟 Demo
+
+### Ciclo de Memória em Ação
+
+<div align="center">
+<img src="./images/teste-na-pratica.1.png" alt="Primeira Gravação de Memória" width="750"/>
+</div>
+
+_Visualização do ciclo completo: Pré-tarefa → Recuperação → Execução → Gravação_
+
+**O que você verá:**
+
+- 🔍 **Recuperação automática** de contexto relevante
+- 🧠 **Processamento inteligente** com base em memórias
+- 💾 **Armazenamento seletivo** apenas de insights valiosos
+- 🔄 **Loop contínuo** de aprendizado entre sessões
+
+<a id="em-acao"></a>
+
 ## 🚀 Memory System em Ação
 
 Agora que você tem o Memory System instalado, vamos testá-lo com prompts reais para ver as capacidades de memória persistente em ação.
 
 ### 🔥 **Teste 1: Análise Inicial & Criação de Memória**
-
-<div align="center">
-<img src="./images/teste-na-pratica.1.png" alt="Primeira Gravação de Memória" width="750"/>
-</div>
 
 Use este **prompt exato** para inicializar seu Memory System:
 
