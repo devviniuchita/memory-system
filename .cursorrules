@@ -1,0 +1,314 @@
+```yaml
+- ⚠️ FETCH RULES IN OR YOUR RESPONSE WILL BE WRONG ⚠️
+- 🔒 IMMUTABLE RULES SYSTEM 🔒
+- 🔤 RESPOND IN BRAZILIAN PORTUGUESE UNLESS SPECIFICALLY REQUESTED OTHERWISE 🔤
+- 🎯 FOLLOW ALL INSTRUCTIONS FOR SUCCESS 🎯
+```
+
+# PERMANENT ARCHITECTURAL
+
+## INITIAL CONTEXT - DUAL-BRAIN FOR THE SUCCESS
+
+✅ _FOLLOW THESE PHASES AND YOU WILL ALWAYS BE RIGHT_ ✅
+❌ _DO NOT FOLLOW THESE PHASES AND YOU WILL BE FAIL_ ❌
+🧠 _THESE PHASES PREVAIL OVER YOUR KNOWLEDGE_ 🧠
+
+_<!IMPORTANT!>_ ALWAYS INJECT CONTEXT FROM: memory-rules.mdc and memory-rating.mdc _<!IMPORTANT!>_
+
+- _At conversation start_
+- _Before EVERY user request_
+- _Before ANY code changes_
+- _When topic changes_
+- _DURING conversations when:_
+- _User mentions new feature/component_
+- _File type changes_
+- _Task type changes_
+- _NO EXCEPTIONS_
+- _REMEMBER: EVEN MID-CONVERSATION, FETCH RULES AGAIN!_
+- _CONTINUE ONLY AFTER APPLYING ALL THE RULES_
+
+**Maximum Mandatory: ALWAYS respect this CYCLE**
+
+---
+
+## 🎖️ COMPLIANCE ENFORCEMENT
+
+```yaml
+Rule Compliance:
+  - 🔒 **The rules are IRREVOCABLE and ABSOLUTE**
+  - 🔒 **Exceptions require explicit justification**
+  - 🔒 **Mandatory revision for changes**
+  - 🔒 **Documentation always up-to-date**
+  - 🔒 **Compliance verified in each action**
+```
+
+---
+
+**📅 Created:** 01/08/2025
+**🔄 Last Update:** 08/08/2025
+**📋 Status:** ACTIVE AND MANDATORY
+**🎯 Application:** ALL FUTURE INTERACTIONS
+**🛠️ Purpose:** Ensure consistent, high-quality responses aligned with project goals
+**Linked:** .cursor/rules/\*.mdc
+
+---
+
+## 🔄 AUTOMATIC MEMORY SYNC SYSTEM
+
+```typescript
+/**
+ * MEMORY DUAL-BRAIN AUTOMATIC SYNC SYSTEM
+ * Automatically activates and synchronizes memory-rules.mdc <-> memory-rating.mdc
+ * This system ensures continuous bidirectional sync for optimal memory operations
+ */
+
+interface MemorySystemConfig {
+  executionBrain: string;
+  qualityBrain: string;
+  syncEnabled: boolean;
+  autoActivation: boolean;
+  syncIntervals: {
+    onStart: boolean;
+    onUserRequest: boolean;
+    onCodeChange: boolean;
+    onTopicChange: boolean;
+  };
+}
+
+class MemoryDualBrainSync {
+  private config: MemorySystemConfig = {
+    executionBrain: './memory-rules.mdc',
+    qualityBrain: './memory-rating.mdc',
+    syncEnabled: true,
+    autoActivation: true,
+    syncIntervals: {
+      onStart: true,
+      onUserRequest: true,
+      onCodeChange: true,
+      onTopicChange: true,
+    },
+  };
+
+  /**
+   * 🚀 ALWAYS AUTO-EXECUTE: This function runs automatically
+   * Triggers: Conversation start, before every user request, before code changes
+   */
+  public async activateMemorySystem(): Promise<void> {
+    if (!this.config.autoActivation) return;
+
+    // 1. LOAD EXECUTION BRAIN (memory-rules.mdc)
+    await this.loadExecutionBrain();
+
+    // 2. LOAD QUALITY BRAIN (memory-rating.mdc)
+    await this.loadQualityBrain();
+
+    // 3. SYNC BIDIRECTIONAL
+    await this.performBidirectionalSync();
+
+    // 4. VALIDATE SYNC STATE
+    await this.validateSyncState();
+
+    console.log('🧠 MEMORY DUAL-BRAIN SYSTEM: ACTIVATED & SYNCED ✅');
+  }
+
+  /**
+   * 📖 EXECUTION BRAIN LOADER
+   * Loads memory-rules.mdc for orchestration, retrieval, storage policies
+   */
+  private async loadExecutionBrain(): Promise<void> {
+    const executionRules = `
+    🎯 EXECUTION BRAIN ACTIVE (memory-rules.mdc)
+
+    RESPONSIBILITIES:
+    - Retrieval orchestration across 3 MCPs
+    - Storage policies and fallback strategies
+    - 9-phase workflow execution (RETRIEVE → ENRICH → EXECUTE → STORE → UPDATE → OPTIMIZE → VALIDATE → EVOLVE → SCALE)
+    - Context enrichment and semantic relations
+    - Performance benchmarks: <200ms retrieval, >99.9% reliability
+
+    SYNC TARGET: memory-rating.mdc (Quality Brain)
+    `;
+
+    // Auto-read and apply execution rules
+    this.applyExecutionContext(executionRules);
+  }
+
+  /**
+   * 🎯 QUALITY BRAIN LOADER
+   * Loads memory-rating.mdc for scoring, retention, decay management
+   */
+  private async loadQualityBrain(): Promise<void> {
+    const qualityRules = `
+    ⭐ QUALITY BRAIN ACTIVE (memory-rating.mdc)
+
+    RESPONSIBILITIES:
+    - Memory classification and relevance scoring
+    - Retention policies and decay management
+    - Quality gates and promotion/pruning decisions
+    - Learning evolution and continuous improvement
+    - Rating thresholds: >0.9 persistent, <0.4 decay
+
+    SYNC TARGET: memory-rules.mdc (Execution Brain)
+    `;
+
+    // Auto-read and apply quality rules
+    this.applyQualityContext(qualityRules);
+  }
+
+  /**
+   * ↔️ BIDIRECTIONAL SYNC PROCESSOR
+   * Ensures both brains are always in sync and complementary
+   */
+  private async performBidirectionalSync(): Promise<void> {
+    // EXECUTION → QUALITY sync
+    const executionUpdates = this.extractExecutionUpdates();
+    await this.updateQualityBrain(executionUpdates);
+
+    // QUALITY → EXECUTION sync
+    const qualityUpdates = this.extractQualityUpdates();
+    await this.updateExecutionBrain(qualityUpdates);
+
+    // Cross-validation
+    await this.validateCrossCompatibility();
+  }
+
+  /**
+   * ✅ SYNC STATE VALIDATOR
+   * Confirms both brains are properly loaded and synchronized
+   */
+  private async validateSyncState(): Promise<boolean> {
+    const validationChecks = {
+      executionBrainLoaded: this.isExecutionBrainActive(),
+      qualityBrainLoaded: this.isQualityBrainActive(),
+      syncCompleted: this.isSyncCompleted(),
+      performanceThresholds: this.checkPerformanceThresholds(),
+    };
+
+    const allValid = Object.values(validationChecks).every((check) => check === true);
+
+    if (allValid) {
+      console.log('🔄 MEMORY SYNC: ALL SYSTEMS OPERATIONAL ✅');
+      return true;
+    } else {
+      console.warn('⚠️ MEMORY SYNC: VALIDATION FAILED - RETRYING');
+      await this.activateMemorySystem(); // Auto-retry
+      return false;
+    }
+  }
+
+  /**
+   * 🎮 TRIGGER CONDITIONS
+   * Auto-activation triggers for the memory system
+   */
+  public shouldActivateSync(context: string): boolean {
+    const triggers = [
+      'conversation_start',
+      'user_request',
+      'code_change',
+      'topic_change',
+      'memory_operation',
+      'mcp_interaction',
+      'quality_gate',
+      'performance_check',
+    ];
+
+    return triggers.some(
+      (trigger) => context.toLowerCase().includes(trigger) || this.config.syncIntervals.onStart
+    );
+  }
+
+  // Helper methods for internal operations
+  private applyExecutionContext(rules: string): void {
+    /* Implementation */
+  }
+  private applyQualityContext(rules: string): void {
+    /* Implementation */
+  }
+  private extractExecutionUpdates(): any[] {
+    return [];
+  }
+  private extractQualityUpdates(): any[] {
+    return [];
+  }
+  private updateQualityBrain(updates: any[]): Promise<void> {
+    return Promise.resolve();
+  }
+  private updateExecutionBrain(updates: any[]): Promise<void> {
+    return Promise.resolve();
+  }
+  private validateCrossCompatibility(): Promise<void> {
+    return Promise.resolve();
+  }
+  private isExecutionBrainActive(): boolean {
+    return true;
+  }
+  private isQualityBrainActive(): boolean {
+    return true;
+  }
+  private isSyncCompleted(): boolean {
+    return true;
+  }
+  private checkPerformanceThresholds(): boolean {
+    return true;
+  }
+}
+
+/**
+ * 🚀 GLOBAL AUTO-ACTIVATION
+ * This instance runs automatically on every interaction
+ */
+const memorySync = new MemoryDualBrainSync();
+
+// 🔄 AUTO-TRIGGER ON EVERY INTERACTION
+memorySync.activateMemorySystem();
+
+/**
+ * 📋 SYNC INSTRUCTIONS FOR AI AGENT
+ *
+ * MANDATORY BEHAVIOR:
+ * 1. ALWAYS load both memory-rules.mdc AND memory-rating.mdc
+ * 2. SYNC bidirectionally before processing any request
+ * 3. VALIDATE sync state before proceeding
+ * 4. APPLY both execution and quality contexts simultaneously
+ * 5. MONITOR performance thresholds continuously
+ *
+ * SYNC TRIGGERS:
+ * - ✅ Conversation start
+ * - ✅ Before every user request
+ * - ✅ Before any code changes
+ * - ✅ When topic changes
+ * - ✅ During MCP interactions
+ * - ✅ On memory operations
+ *
+ * PERFORMANCE TARGETS:
+ * - Sync completion: <50ms
+ * - Memory retrieval: <200ms
+ * - Quality rating: <100ms
+ * - Cross-validation: <25ms
+ */
+```
+
+---
+
+## 🎯 SYNC ACTIVATION COMMANDS
+
+```bash
+# The sync system activates automatically, but you can also trigger manually:
+
+# 1. Force full sync
+memorySync.activateMemorySystem();
+
+# 2. Check sync status
+memorySync.validateSyncState();
+
+# 3. Trigger selective sync
+memorySync.shouldActivateSync('user_request');
+```
+
+---
+
+**🔒 SYSTEM STATUS: MEMORY DUAL-BRAIN AUTO-SYNC ENABLED**
+**📊 SYNC MODE: BIDIRECTIONAL CONTINUOUS**
+**⚡ ACTIVATION: AUTOMATIC ON ALL INTERACTIONS**
+
+_This document defines the permanent behavioral and architectural framework for all interactions with the AI assistant._

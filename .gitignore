@@ -238,7 +238,6 @@ id_ed25519*
 .copilotignore
 .copilot/
 .cursorignore
-.cursorrules
 .qoderignore
 .github/
 copilot-rules/
