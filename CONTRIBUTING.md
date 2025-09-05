@@ -1,233 +1,270 @@
-# 🚀 Contributing to Memory System
+<div align="center">
 
-> **Welcome!** Thank you for your interest in contributing to the Memory System project. Together, we're building the future of persistent AI memory.
+# 🚀 Contribuindo para o Memory System
 
----
+> **Bem-vindo!** Obrigado por seu interesse em contribuir para o projeto Memory System. Juntos, estamos construindo o futuro da memória persistente de IA.
 
-## 💖 **Welcome to Our Community**
+[![Contributors](https://img.shields.io/github/contributors/devviniuchita/memory-system?style=for-the-badge&color=brightgreen)](https://github.com/devviniuchita/memory-system/graphs/contributors)
+[![Pull Requests](https://img.shields.io/github/issues-pr/devviniuchita/memory-system?style=for-the-badge&color=blue)](https://github.com/devviniuchita/memory-system/pulls)
+[![Community](https://img.shields.io/badge/Comunidade-Ativa-purple?style=for-the-badge)](https://github.com/devviniuchita/memory-system/discussions)
 
-Memory System is more than just code—it's a **movement toward persistent AI intelligence**. Whether you're fixing a bug, adding a feature, or improving documentation, every contribution helps build a more intelligent future.
-
-### 🌟 **Our Vision**
-
-We're creating a world where AI systems never forget, continuously learn, and provide increasingly valuable assistance to humans.
+</div>
 
 ---
 
-## 🤝 **How to Contribute**
+## 💖 **Bem-vindo à Nossa Comunidade**
 
-### � **Reporting Bugs**
+Memory System é mais que apenas código — é um **movimento em direção à inteligência de IA persistente**. Seja corrigindo um bug, adicionando uma funcionalidade ou melhorando a documentação, cada contribuição ajuda a construir um futuro mais inteligente.
 
-Found an issue? Help us fix it:
+### 🌟 **Nossa Visão**
 
-1. **Check existing issues** to avoid duplicates
-2. **Use our bug report template**:
-   ```
-   **Bug Description**: Clear, concise description
-   **Steps to Reproduce**: 1. Step one, 2. Step two...
-   **Expected Behavior**: What should happen
-   **Actual Behavior**: What actually happens
-   **Environment**: OS, Cursor version, MCP versions
-   **Memory System Version**: Current version
-   ```
-3. **Include logs** from `.cursor/rules/` if relevant
-4. **Add labels**: bug, needs-triage
-
-### 💡 **Suggesting Features**
-
-Have an idea? We'd love to hear it:
-
-1. **Open a feature request** with our template:
-   ```
-   **Feature Request**: Descriptive title
-   **Problem Statement**: What problem does this solve?
-   **Proposed Solution**: Your suggested approach
-   **Alternatives Considered**: Other options you've thought about
-   **Impact**: How will this benefit users?
-   ```
-2. **Add labels**: enhancement, needs-discussion
-3. **Join the discussion** in the issue comments
-
-### 🔧 **Your First Pull Request**
-
-Ready to code? Here's how:
-
-1. **Fork the repository** on GitHub
-2. **Clone your fork**:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/memory-system.git
-   cd memory-system
-   ```
-3. **Create a feature branch**:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-4. **Make your changes** following our style guide
-5. **Test thoroughly** (see testing requirements below)
-6. **Commit with clear messages**:
-   ```bash
-   git commit -m "feat: add semantic memory clustering"
-   ```
-7. **Push to your fork**:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-8. **Open a Pull Request** with our template
-
-### � **Improving Documentation**
-
-Documentation is crucial for adoption:
-
-- **Fix typos** and improve clarity
-- **Add examples** for complex concepts
-- **Update outdated information**
-- **Translate content** (especially English ↔ Portuguese)
-- **Create tutorials** for advanced use cases
+Estamos criando um mundo onde sistemas de IA nunca esquecem, aprendem continuamente e fornecem assistência cada vez mais valiosa aos humanos.
 
 ---
 
-## ⚡ **Technical Standards**
+## 🤝 **Como Contribuir**
 
-### 🧠 **AI/MCP Specific Requirements**
+### 🐛 **Reportando Bugs**
 
-**Performance Benchmarks:**
+Encontrou um problema? Ajude-nos a corrigi-lo:
 
-- ⚡ Embedding Speed: <50ms
-- 🎯 Reliability: >99.9%
-- 🧠 Memory Retrieval: <200ms
-- 💾 Storage Efficiency: <75ms neural processing
+<div align="center">
 
-**Workflow Compliance:**
+| Etapa | Ação | Descrição |
+|-------|------|-----------|
+| 1️⃣ | **Verificar issues existentes** | Evite duplicatas |
+| 2️⃣ | **Usar template de bug report** | Forneça informações claras |
+| 3️⃣ | **Incluir logs relevantes** | De `.cursor/rules/` se aplicável |
+| 4️⃣ | **Adicionar labels** | `bug`, `needs-triage` |
 
-- ✅ 9-Phase Workflow: `RETRIEVE→ENRICH→EXECUTE→STORE→UPDATE→OPTIMIZE→VALIDATE→EVOLVE→SCALE`
-- ✅ Dual-Brain Integration: `memory-rules.mdc` ↔ `memory-rating.mdc`
-- ✅ Triple MCP Validation: [Byterover](https://www.byterover.dev/) + [Supermemory](https://mcp.supermemory.ai/) + [Memory](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)
+</div>
 
-### 📋 **Code Style**
-
-**Documentation Standards:**
-
-- Portuguese for user-facing docs with international technical quality
-- English for developer comments and technical specs
-- [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) compliance
-
-**Commit Conventions:**
-
-```
-feat: add new memory clustering algorithm
-fix: resolve embedding timeout issues
-docs: update installation guide
-test: add memory retention test cases
-refactor: optimize dual-brain coordination
+**Template de Bug Report:**
+```markdown
+**Descrição do Bug**: Descrição clara e concisa
+**Passos para Reproduzir**: 1. Passo um, 2. Passo dois...
+**Comportamento Esperado**: O que deveria acontecer
+**Comportamento Atual**: O que realmente acontece
+**Ambiente**: SO, versão do Cursor, versões MCP
+**Versão Memory System**: Versão atual
 ```
 
-**File Organization:**
+### 💡 **Sugerindo Funcionalidades**
+
+Tem uma ideia? Adoraríamos ouvi-la:
+
+<div align="center">
+
+```mermaid
+graph LR
+    A[💭 Ideia] --> B[📝 Feature Request]
+    B --> C[💬 Discussão da Comunidade]
+    C --> D[🔍 Análise de Viabilidade]
+    D --> E[✅ Aprovação]
+    E --> F[🛠️ Implementação]
+```
+
+</div>
+
+**Template de Feature Request:**
+```markdown
+**Solicitação de Funcionalidade**: Título descritivo
+**Declaração do Problema**: Que problema isso resolve?
+**Solução Proposta**: Sua abordagem sugerida
+**Alternativas Consideradas**: Outras opções que você pensou
+**Impacto**: Como isso beneficiará os usuários?
+```
+
+### 🔧 **Seu Primeiro Pull Request**
+
+Pronto para codificar? Aqui está como:
+
+<div align="center">
+
+| Etapa | Comando/Ação | Descrição |
+|-------|--------------|-----------|
+| 1️⃣ | **Fork do repositório** | No GitHub |
+| 2️⃣ | `git clone https://github.com/SEU_USUARIO/memory-system.git` | Clone seu fork |
+| 3️⃣ | `git checkout -b feature/sua-feature` | Crie branch da feature |
+| 4️⃣ | **Faça suas alterações** | Seguindo nosso guia de estilo |
+| 5️⃣ | **Teste completamente** | Veja requisitos de teste abaixo |
+| 6️⃣ | `git commit -m "feat: adicionar clustering semântico de memória"` | Commit com mensagens claras |
+| 7️⃣ | `git push origin feature/sua-feature` | Push para seu fork |
+| 8️⃣ | **Abrir Pull Request** | Com nosso template |
+
+</div>
+
+### 📚 **Melhorando Documentação**
+
+A documentação é crucial para adoção:
+
+- **Corrigir erros** e melhorar clareza
+- **Adicionar exemplos** para conceitos complexos
+- **Atualizar informações desatualizadas**
+- **Traduzir conteúdo** (especialmente Inglês ↔ Português)
+- **Criar tutoriais** para casos de uso avançados
+
+---
+
+## ⚡ **Padrões Técnicos**
+
+### 🧠 **Requisitos Específicos de IA/MCP**
+
+<div align="center">
+
+| Categoria | Métrica | Valor Mínimo |
+|-----------|---------|--------------|
+| ⚡ **Velocidade de Embedding** | Processamento | `<50ms` |
+| 🎯 **Confiabilidade** | Uptime | `>99.9%` |
+| 🧠 **Recuperação de Memória** | Latência | `<200ms` |
+| 💾 **Eficiência de Armazenamento** | Processamento Neural | `<75ms` |
+
+</div>
+
+**Conformidade com Workflow:**
+
+- ✅ Workflow 9 Fases: `RETRIEVE→ENRICH→EXECUTE→STORE→UPDATE→OPTIMIZE→VALIDATE→EVOLVE→SCALE`
+- ✅ Integração Dual-Brain: `memory-rules.mdc` ↔ `memory-rating.mdc`
+- ✅ Validação Tripla MCP: [Byterover](https://www.byterover.dev/) + [Supermemory](https://mcp.supermemory.ai/) + [Memory](https://github.com/modelcontextprotocol/servers/tree/main/src/memory)
+
+### 📋 **Estilo de Código**
+
+**Padrões de Documentação:**
+
+<div align="center">
+
+| Aspecto | Padrão | Exemplo |
+|---------|--------|---------|
+| **Documentação do Usuário** | Português | Interface e tutoriais |
+| **Comentários do Desenvolvedor** | Inglês | Código e especificações técnicas |
+| **Conformidade MCP** | [Model Context Protocol](https://modelcontextprotocol.io/) | Padrão obrigatório |
+
+</div>
+
+**Convenções de Commit:**
+
+```
+feat: adicionar novo algoritmo de clustering de memória
+fix: resolver problemas de timeout de embedding
+docs: atualizar guia de instalação
+test: adicionar casos de teste de retenção de memória
+refactor: otimizar coordenação dual-brain
+```
+
+**Organização de Arquivos:**
 
 ```
 memory-system/
-├── memory-rules.mdc         # Execution brain (HOW)
-├── memory-rating.mdc        # Quality brain (WHEN/QUALITY)
-├── .cursorrules            # Router configuration
-└── .cursor/rules/          # Rule storage (gitignored)
+├── memory-rules.mdc         # Execution brain (COMO)
+├── memory-rating.mdc        # Quality brain (QUANDO/QUALIDADE)
+├── .cursorrules            # Configuração do roteador
+└── .cursor/rules/          # Armazenamento de regras (gitignored)
 ```
 
 ---
 
-## 🧪 **Testing Requirements**
+## 🧪 **Requisitos de Teste**
 
-### **Memory System Tests**
+### **Testes do Memory System**
 
-Before submitting PRs, run these validation prompts:
+Antes de enviar PRs, execute estes prompts de validação:
 
-**Test 1 - Initial Memory Creation:**
+<div align="center">
 
-```yaml
-'Analyze .cursorrules, memory-rules.mdc, and memory-rating.mdc.
-Explain their interconnection and save memories of what you understood.'
-```
+| Teste | Prompt | Resultado Esperado |
+|-------|--------|--------------------|
+| **Teste 1** | `'Analise .cursorrules, memory-rules.mdc e memory-rating.mdc. Explique sua interconexão e salve memórias do que compreendeu.'` | ✅ Criação e recuperação de memória funcionando |
+| **Teste 2** | `'Analise este projeto. Que padrões você vê? Armazene insights e atualize sua compreensão.'` | ✅ Evolução de memória funcionando |
+| **Teste 3** | `'Demonstre workflow de memória contínuo recuperando insights anteriores, analisando esta solicitação e armazenando novo conhecimento.'` | ✅ Coordenação dual-brain funcionando |
 
-**Test 2 - Memory Evolution:**
+</div>
 
-```yaml
-'Analyze this project structure. What patterns do you see?
-Store insights and update your understanding.'
-```
+**Resultados Esperados:**
 
-**Test 3 - Continuous Flow:**
-
-```yaml
-'Demonstrate continuous memory workflow by retrieving previous insights,
-analyzing this request, and storing new knowledge.'
-```
-
-**Expected Results:**
-
-- ✅ All 3 MCPs active and responding
-- ✅ Memory creation and retrieval working
-- ✅ Dual-brain coordination functioning
-- ✅ Performance within benchmarks
+- ✅ Todos os 3 MCPs ativos e respondendo
+- ✅ Criação e recuperação de memória funcionando
+- ✅ Coordenação dual-brain funcionando
+- ✅ Performance dentro dos benchmarks
 
 ---
 
-## 🎯 **Pull Request Checklist**
+## 🎯 **Checklist do Pull Request**
 
-Before submitting your PR:
+Antes de enviar seu PR:
 
-- [ ] **Code follows style guidelines**
-- [ ] **All tests pass** (run the 3 validation prompts)
-- [ ] **Performance benchmarks met** (<50ms, >99.9% reliability)
-- [ ] **Documentation updated** if needed
-- [ ] **Commit messages follow convention**
-- [ ] **No breaking changes** without discussion
-- [ ] **Memory system integration tested**
-- [ ] **Triple MCP compatibility verified**
+<div align="center">
+
+| ✅ | Requisito | Descrição |
+|----|-----------|-----------|
+| ☐ | **Código segue diretrizes de estilo** | Padrões estabelecidos |
+| ☐ | **Todos os testes passam** | Execute os 3 prompts de validação |
+| ☐ | **Benchmarks de performance atendidos** | `<50ms`, `>99.9%` confiabilidade |
+| ☐ | **Documentação atualizada** | Se necessário |
+| ☐ | **Mensagens de commit seguem convenção** | `feat:`, `fix:`, etc. |
+| ☐ | **Sem breaking changes** | Sem discussão prévia |
+| ☐ | **Integração do sistema de memória testada** | Funcionamento completo |
+| ☐ | **Compatibilidade tripla MCP verificada** | Todos os MCPs funcionando |
+
+</div>
 
 ---
 
-## 🌟 **Recognition & Community**
+## 🌟 **Reconhecimento & Comunidade**
 
-### 🏆 **Contributors Hall of Fame**
+### 🏆 **Hall da Fama de Contribuidores**
 
-We celebrate our contributors! Outstanding contributions are recognized through:
+Celebramos nossos contribuidores! Contribuições destacadas são reconhecidas através de:
 
-- **GitHub profile mentions** in releases
-- **Contributor badges** in documentation
-- **Special thanks** in community updates
-- **Priority support** for future contributions
+<div align="center">
 
-### 📞 **Get Help**
+| Reconhecimento | Descrição |
+|----------------|-----------|
+| 🌟 **Menções no perfil GitHub** | Em releases |
+| 🏅 **Badges de contribuidor** | Na documentação |
+| 📢 **Agradecimentos especiais** | Em atualizações da comunidade |
+| 🚀 **Suporte prioritário** | Para contribuições futuras |
 
-Need assistance?
+</div>
 
-- 💬 **GitHub Discussions**: Ask questions and share ideas
-- 🐛 **Issues**: Report bugs and request features
-- 📧 **Email**: viniciusuchita@gmail.com for sensitive matters
+### 📞 **Obter Ajuda**
+
+Precisa de assistência?
+
+- 💬 **GitHub Discussions**: Faça perguntas e compartilhe ideias
+- 🐛 **Issues**: Reporte bugs e solicite funcionalidades
+- 📧 **Email**: viniciusuchita@gmail.com para assuntos sensíveis
 - 💼 **LinkedIn**: [Vinícius Uchita](https://www.linkedin.com/in/viniciusuchita/)
 
 ---
 
-## 📄 **Code of Conduct**
+## 📄 **Código de Conduta**
 
-We are committed to providing a welcoming and inclusive environment. Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+Estamos comprometidos em fornecer um ambiente acolhedor e inclusivo. Por favor, leia nosso [Código de Conduta](CODE_OF_CONDUCT.md) antes de contribuir.
 
-**In summary:**
+**Em resumo:**
 
-- ✅ Be respectful and inclusive
-- ✅ Welcome newcomers and help them learn
-- ✅ Focus on what's best for the community
-- ✅ Show empathy toward other community members
+<div align="center">
 
----
+| ✅ Faça | ❌ Não Faça |
+|---------|-------------|
+| Seja respeitoso e inclusivo | Linguagem ofensiva ou discriminatória |
+| Receba novatos e ajude-os a aprender | Comportamento de assédio |
+| Foque no que é melhor para a comunidade | Ataques pessoais |
+| Mostre empatia com outros membros | Compartilhar informações privadas |
 
-## 🎉 **Thank You!**
-
-Every contribution, no matter how small, makes Memory System better. Thank you for being part of this journey toward more intelligent AI systems.
-
-**Ready to contribute?** 🚀 [Open your first issue](https://github.com/devviniuchita/memory-system/issues/new) or [submit a pull request](https://github.com/devviniuchita/memory-system/compare)!
+</div>
 
 ---
 
-**Memory System Community** | Built with ❤️ by contributors worldwide
+## 🎉 **Obrigado!**
+
+Cada contribuição, não importa quão pequena, torna o Memory System melhor. Obrigado por fazer parte desta jornada em direção a sistemas de IA mais inteligentes.
+
+**Pronto para contribuir?** 🚀 [Abra sua primeira issue](https://github.com/devviniuchita/memory-system/issues/new) ou [envie um pull request](https://github.com/devviniuchita/memory-system/compare)!
+
+---
+
+## 🔧 **Dependências de Desenvolvimento**
 
 ```bash
 # 1. Clone e configure
@@ -244,24 +281,30 @@ npm install -g supergateway
 
 ### Dependências
 
-- **Cursor IDE** + **MCP Integration**
-- **Node.js 18+** para MCP servers
+- **Cursor IDE** + **Integração MCP**
+- **Node.js 18+** para servidores MCP
 - **Conhecimento**: Python/TypeScript, sistemas de memória
 
 ---
 
-## 🎯 **TIPOS DE CONTRIBUIÇÃO**
+## 🎯 **Tipos de Contribuição**
 
 ### 🧠 **Algoritmos de Memória (Prioridade Alta)**
 
-- Otimização de RAG (Retrieval-Augmented Generation)
-- Algoritmos de retenção e decay inteligente
-- Compressão semântica de contexto
-- Estratégias de fallback para MCPs
+<div align="center">
+
+| Área | Descrição | Impacto |
+|------|-----------|---------|
+| **Otimização RAG** | Retrieval-Augmented Generation | 🔴 Alto |
+| **Algoritmos de retenção** | Decay inteligente | 🔴 Alto |
+| **Compressão semântica** | Contexto eficiente | 🟡 Médio |
+| **Estratégias de fallback** | Para MCPs | 🟡 Médio |
+
+</div>
 
 ### ⚡ **Integração MCP (Prioridade Alta)**
 
-- Novos MCP servers para diferentes fontes
+- Novos servidores MCP para diferentes fontes
 - Melhorias na comunicação entre MCPs
 - Protocolos de sincronização dual-brain
 - Segurança e autenticação MCP
@@ -275,45 +318,53 @@ npm install -g supergateway
 
 ---
 
-## ✅ **PROCESSO DE REVIEW - CRITÉRIOS AI-SPECIFIC**
+## ✅ **Processo de Review - Critérios Específicos de IA**
 
 ### Checklist Obrigatório
 
-- [ ] **Algoritmos de Memória**: Performance testada (benchmarks incluídos)
-- [ ] **MCP Integration**: Servidores testados e compatíveis
-- [ ] **Dual-Brain Compliance**: Validação `memory-rules.mdc` ↔ `memory-rating.mdc`
-- [ ] **9-Phase Workflow**: Testes para todas as fases do ciclo
-- [ ] **Documentação**: Exemplos de uso incluídos
-- [ ] **Testes de Prompts**: 3 prompts padrão executados com sucesso
-- [ ] **Performance**: Não degrada métricas (<50ms, >99.9%)
-- [ ] **Segurança**: Validação de dados e tratamento de erros
+<div align="center">
+
+| Categoria | Critério | Status |
+|-----------|----------|--------|
+| **Algoritmos de Memória** | Performance testada (benchmarks incluídos) | ☐ |
+| **Integração MCP** | Servidores testados e compatíveis | ☐ |
+| **Conformidade Dual-Brain** | Validação `memory-rules.mdc` ↔ `memory-rating.mdc` | ☐ |
+| **Workflow 9 Fases** | Testes para todas as fases do ciclo | ☐ |
+| **Documentação** | Exemplos de uso incluídos | ☐ |
+| **Testes de Prompts** | 3 prompts padrão executados com sucesso | ☐ |
+| **Performance** | Não degrada métricas (`<50ms`, `>99.9%`) | ☐ |
+| **Segurança** | Validação de dados e tratamento de erros | ☐ |
+
+</div>
 
 ### Critérios de Aprovação
 
-1. **Funcionalidade AI**: Algoritmos corretamente implementados
+1. **Funcionalidade IA**: Algoritmos corretamente implementados
 2. **Qualidade de Memória**: Compressão semântica preservada
 3. **Integração MCP**: Protocolos MCP seguidos
 4. **Performance**: Benchmarks comparativos incluídos
-5. **Testes AI**: Casos edge de IA cobertos
+5. **Testes IA**: Casos edge de IA cobertos
 6. **Documentação**: Exemplos práticos incluídos
 
 ---
 
-## 🧪 **COMPLIANCE DUAL-BRAIN E 9 FASES**
+## 🧪 **Conformidade Dual-Brain e 9 Fases**
 
 ### Diretrizes Arquiteturais
 
-**memory-rules.mdc (Execution Brain):**
+<div align="center">
 
-- Define políticas de execução, recuperação e armazenamento
-- Implementa fallback strategies e orquestração MCP
-- Gere fluxo entre as 9 fases do workflow
+| Brain | Arquivo | Responsabilidade |
+|-------|---------|------------------|
+| **Execution Brain** | `memory-rules.mdc` | Políticas de execução, recuperação e armazenamento |
+| **Quality Brain** | `memory-rating.mdc` | Critérios de qualidade, retenção e decay |
 
-**memory-rating.mdc (Quality Brain):**
+</div>
 
-- Define critérios de qualidade, retenção e decay
-- Implementa scoring e pruning de memórias
-- Guia evolução contínua do sistema
+**Workflow 9 Fases:**
+```
+RETRIEVE → ENRICH → EXECUTE → STORE → UPDATE → OPTIMIZE → VALIDATE → EVOLVE → SCALE
+```
 
 ### Validação Requerida
 
@@ -330,44 +381,39 @@ test_scenario:
 
 ---
 
-## 📋 **CHECKLIST ESPECÍFICO PRD**
+## 📋 **Requisitos de Performance**
 
-### Performance Requirements
+<div align="center">
 
-| Métrica                  | Valor Mínimo | Como Testar                 |
-| ------------------------ | ------------ | --------------------------- |
-| Embedding Speed          | <50ms        | Benchmark incluído no PR    |
-| Reliability              | >99.9%       | Testes de stress 1000+ ops  |
-| Retrieval Speed          | <200ms       | Testes com datasets grandes |
-| Cross-Session Continuity | Seamless     | Validação multi-sessão      |
+| Métrica | Valor Mínimo | Como Testar |
+|---------|--------------|-------------|
+| **Velocidade de Embedding** | `<50ms` | Benchmark incluído no PR |
+| **Confiabilidade** | `>99.9%` | Testes de stress 1000+ ops |
+| **Velocidade de Recuperação** | `<200ms` | Testes com datasets grandes |
+| **Continuidade Cross-Session** | Seamless | Validação multi-sessão |
 
-### Documentação Requirements
+</div>
 
-- [ ] Algoritmos explicados com exemplos
-- [ ] Diagramas de arquitetura (quando aplicável)
-- [ ] Configuração paso a paso
-- [ ] Casos de uso práticos
-- [ ] Troubleshooting common issues
+### Requisitos de Documentação
+
+- ☐ Algoritmos explicados com exemplos
+- ☐ Diagramas de arquitetura (quando aplicável)
+- ☐ Configuração passo a passo
+- ☐ Casos de uso práticos
+- ☐ Troubleshooting de problemas comuns
 
 ---
 
-## 🧪 **PROMPTS DE TESTE EM PRS**
+## 🧪 **Prompts de Teste em PRs**
 
 ### Orientação Obrigatória
 
 Toda contribuição que afeta algoritmos de memória deve incluir:
 
-1. **Resultado dos 3 Prompts Padrão** (conforme README):
-
-   ```yaml
-   Prompt 1: 'Analise .cursorrules, memory-rules.mdc e memory-rating.mdc...'
-   Prompt 2: 'Agora analise todo o meu projeto...'
-   Prompt 3: 'A partir de agora, siga o fluxo 9 fases...'
-   ```
-
+1. **Resultado dos 3 Prompts Padrão** (conforme README)
 2. **Performance Before/After**: Métricas comparativas
-3. **Memory Usage**: Análise de consumo de recursos
-4. **Fallback Testing**: Validação com MCPs indisponíveis
+3. **Uso de Memória**: Análise de consumo de recursos
+4. **Teste de Fallback**: Validação com MCPs indisponíveis
 
 ### Formato no PR
 
@@ -376,9 +422,9 @@ Toda contribuição que afeta algoritmos de memória deve incluir:
 
 **Prompts Executados:**
 
-- [ ] Prompt 1: ✅ Gravação inicial ok (tempo: X ms)
-- [ ] Prompt 2: ✅ Análise projeto ok (memórias: Y)
-- [ ] Prompt 3: ✅ Ativação permanente ok
+- ☐ Prompt 1: ✅ Gravação inicial ok (tempo: X ms)
+- ☐ Prompt 2: ✅ Análise projeto ok (memórias: Y)
+- ☐ Prompt 3: ✅ Ativação permanente ok
 
 **Performance:**
 
@@ -388,14 +434,20 @@ Toda contribuição que afeta algoritmos de memória deve incluir:
 
 ---
 
-## 📞 **CONTATO & SUPORTE**
+## 📞 **Contato & Suporte**
 
 ### Canais de Comunicação
 
-- **📧 Technical Issues**: [viniciusuchita@gmail.com](mailto:viniciusuchita@gmail.com)
-- **💬 GitHub Discussions**: Para questões técnicas e ideias
-- **🐛 Bug Reports**: GitHub Issues com reprodução detalhada
-- **💼 Professional Network**: [LinkedIn](https://www.linkedin.com/in/viniciusuchita/)
+<div align="center">
+
+| Canal | Uso | Resposta |
+|-------|-----|----------|
+| 📧 **Email** | Questões técnicas críticas | 24-48h |
+| 💬 **GitHub Discussions** | Questões técnicas gerais | Comunidade |
+| 🐛 **Bug Reports** | GitHub Issues | 1-3 dias |
+| 💼 **LinkedIn** | Networking profissional | Variável |
+
+</div>
 
 ### Processo de Resolução
 
@@ -405,36 +457,39 @@ Toda contribuição que afeta algoritmos de memória deve incluir:
 
 ---
 
-## 🏆 **RECONHECIMENTO**
+## 🏆 **Sistema de Reconhecimento**
 
-### Sistema de Contribuições
+### Níveis de Contribuição
 
-- **🌟 Contributors**: Listados no README principal
-- **💎 Memory Champions**: Algoritmos significativos implementados
-- **⚡ MCP Integrators**: Novas integrações MCP
-- **📚 Documentation Heroes**: Melhorias substanciais na documentação
+<div align="center">
+
+| Nível | Badge | Critério |
+|-------|-------|----------|
+| 🌟 **Contributors** | Básico | Listados no README principal |
+| 💎 **Memory Champions** | Avançado | Algoritmos significativos implementados |
+| ⚡ **MCP Integrators** | Especialista | Novas integrações MCP |
+| 📚 **Documentation Heroes** | Expert | Melhorias substanciais na documentação |
+
+</div>
 
 ### Oportunidades de Crescimento
 
-- **Maintainer Status**: Para contribuições consistentes
-- **Tech Lead Roles**: Liderança em áreas específicas (algoritmos, MCPs, docs)
+- **Status de Maintainer**: Para contribuições consistentes
+- **Roles de Tech Lead**: Liderança em áreas específicas (algoritmos, MCPs, docs)
 - **Community Building**: Mentorship e suporte a novos contribuidores
 
 ---
 
-## 📄 **LICENÇA**
+## 📄 **Licença**
 
 Este projeto está licenciado sob **MIT License**. Ao contribuir, você concorda que suas contribuições serão licenciadas sob os mesmos termos.
-
-MIT License
-Copyright (c) 2025 Vinícius Uchita (Memory System Team)
 
 ```text
 MIT License
 Copyright (c) 2025 Vinícius Uchita (Memory System Team)
 ```
 
-### Contributor License Agreement
+### Acordo de Licença do Contribuidor
 
 - Suas contribuições são trabalho original
 - Você concede direitos de licença MIT
@@ -443,17 +498,24 @@ Copyright (c) 2025 Vinícius Uchita (Memory System Team)
 
 ---
 
-## 👨‍💻 **MAINTAINER**
+<div align="center">
+
+## 👨‍💻 **Maintainer**
 
 **Vinícius Uchita** - Creator & Lead Maintainer
 
-- 🐙 **GitHub**: [@devviniuchita](https://github.com/devviniuchita)
-- 💼 **LinkedIn**: [linkedin.com/in/viniciusuchita](https://www.linkedin.com/in/viniciusuchita/)
-- 📧 **Email**: [viniciusuchita@gmail.com](mailto:viniciusuchita@gmail.com)
-- 🎯 **Expertise**: Full-Stack Development | AI Integration (RAG, Spring AI) | Context Engineering
+[![GitHub](https://img.shields.io/badge/GitHub-devviniuchita-181717?style=for-the-badge&logo=github)](https://github.com/devviniuchita)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-viniciusuchita-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/viniciusuchita/)
+[![Email](https://img.shields.io/badge/Email-viniciusuchita@gmail.com-D14836?style=for-the-badge&logo=gmail)](mailto:viniciusuchita@gmail.com)
+
+**🎯 Expertise**: Full-Stack Development | Integração IA (RAG, Spring AI) | Context Engineering
 
 ---
 
-## Memory System - AI Agent Evolution Layer
+**Memory System - Camada de Evolução de Agente IA**
 
 > Contribuindo para o futuro da memória inteligente em português.
+
+© 2025 Memory System | Licenciado sob MIT
+
+</div>
