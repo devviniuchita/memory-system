@@ -358,6 +358,9 @@ kengi-idiomas*.log
 api*.log
 dev-debug.log
 
+# Memory System - Runtime metrics (generated files)
+memory-sync-metrics.json
+
 # Temporary files
 *.tmp
 *.temp
