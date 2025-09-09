@@ -12,10 +12,10 @@
  * NOTE: Also provided with a runnable JS build: memory-dual-brain-sync.js
  */
 
-import fs from 'fs/promises';
-import path from 'path';
 import crypto from 'crypto';
 import EventEmitter from 'events';
+import fs from 'fs/promises';
+import path from 'path';
 
 export interface MemorySystemConfig {
   executionBrain: string;
@@ -45,7 +45,7 @@ export class MemoryDualBrainSync extends EventEmitter {
       maxRetries: config?.maxRetries ?? 3,
       retryBaseMs: config?.retryBaseMs ?? 150,
       metricsPath: path.resolve(config?.metricsPath || path.join(cwd, 'memory-sync-metrics.json')),
-      verbose: config?.verbose ?? false
+      verbose: config?.verbose ?? false,
     };
     this.metricsFile = this.config.metricsPath;
   }
@@ -85,7 +85,11 @@ export class MemoryDualBrainSync extends EventEmitter {
       await this.appendMetric('loadExecutionBrain', { durationMs: Date.now() - start, checksum });
       if (this.config.verbose) console.log('[loadExecutionBrain] applied, checksum=', checksum);
     } else {
-      await this.appendMetric('loadExecutionBrain', { durationMs: Date.now() - start, checksum, skipped: true });
+      await this.appendMetric('loadExecutionBrain', {
+        durationMs: Date.now() - start,
+        checksum,
+        skipped: true,
+      });
       if (this.config.verbose) console.log('[loadExecutionBrain] skipped (no changes)');
     }
   }
@@ -100,7 +104,11 @@ export class MemoryDualBrainSync extends EventEmitter {
       await this.appendMetric('loadQualityBrain', { durationMs: Date.now() - start, checksum });
       if (this.config.verbose) console.log('[loadQualityBrain] applied, checksum=', checksum);
     } else {
-      await this.appendMetric('loadQualityBrain', { durationMs: Date.now() - start, checksum, skipped: true });
+      await this.appendMetric('loadQualityBrain', {
+        durationMs: Date.now() - start,
+        checksum,
+        skipped: true,
+      });
       if (this.config.verbose) console.log('[loadQualityBrain] skipped (no changes)');
     }
   }
@@ -119,8 +127,18 @@ export class MemoryDualBrainSync extends EventEmitter {
     if (qualChanges.length) {
       await this.updateExecutionBrain(qualChanges);
     }
-    await this.appendMetric('performBidirectionalSync', { durationMs: Date.now() - start, execChanges: execChanges.length, qualChanges: qualChanges.length });
-    if (this.config.verbose) console.log('[performBidirectionalSync] execChanges=', execChanges.length, 'qualChanges=', qualChanges.length);
+    await this.appendMetric('performBidirectionalSync', {
+      durationMs: Date.now() - start,
+      execChanges: execChanges.length,
+      qualChanges: qualChanges.length,
+    });
+    if (this.config.verbose)
+      console.log(
+        '[performBidirectionalSync] execChanges=',
+        execChanges.length,
+        'qualChanges=',
+        qualChanges.length
+      );
   }
 
   private async validateSyncState(): Promise<boolean> {
@@ -129,7 +147,7 @@ export class MemoryDualBrainSync extends EventEmitter {
       executionBrainLoaded: !!this.lastChecksums.exec,
       qualityBrainLoaded: !!this.lastChecksums.qual,
       syncCompleted: true, // place-holder for deeper validation
-      performanceThresholds: true
+      performanceThresholds: true,
     };
     const allValid = Object.values(checks).every(Boolean);
     await this.appendMetric('validateSyncState', { durationMs: Date.now() - start, checks });
@@ -137,7 +155,8 @@ export class MemoryDualBrainSync extends EventEmitter {
       if (this.retryCount < this.config.maxRetries) {
         this.retryCount++;
         await new Promise((r) => setTimeout(r, this.config.retryBaseMs * this.retryCount));
-        return this.activateMemorySystem();
+        await this.activateMemorySystem();
+        return false;
       }
     }
     return allValid;
@@ -145,7 +164,16 @@ export class MemoryDualBrainSync extends EventEmitter {
 
   public shouldActivateSync(context: string): boolean {
     if (!this.config.syncEnabled) return false;
-    const triggers = ['conversation_start', 'user_request', 'code_change', 'topic_change', 'memory_operation', 'mcp_interaction', 'quality_gate', 'performance_check'];
+    const triggers = [
+      'conversation_start',
+      'user_request',
+      'code_change',
+      'topic_change',
+      'memory_operation',
+      'mcp_interaction',
+      'quality_gate',
+      'performance_check',
+    ];
     return triggers.some((t) => context.toLowerCase().includes(t));
   }
 
@@ -158,13 +186,24 @@ export class MemoryDualBrainSync extends EventEmitter {
 
   private diffBrainContent(source: string, target: string, direction: string): string[] {
     // Very simple diff: line-level suggestions that exist in source but not in target
-    const srcLines = new Set(source.split(/\r?\n/).map((l) => l.trim()).filter(Boolean));
-    const tgtLines = new Set(target.split(/\r?\n/).map((l) => l.trim()).filter(Boolean));
+    const srcLines = new Set(
+      source
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter(Boolean)
+    );
+    const tgtLines = new Set(
+      target
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter(Boolean)
+    );
     const changes: string[] = [];
     for (const l of srcLines) {
       if (!tgtLines.has(l)) changes.push(l);
     }
-    if (this.config.verbose && changes.length) console.log(`[diff:${direction}] found ${changes.length} changes`);
+    if (this.config.verbose && changes.length)
+      console.log(`[diff:${direction}] found ${changes.length} changes`);
     return changes;
   }
 
@@ -183,7 +222,7 @@ export class MemoryDualBrainSync extends EventEmitter {
     const safepath = this.config.qualityBrain + '.sync.tmp';
     const content = updates.join('\n') + '\n';
     await fs.appendFile(safepath, content, 'utf-8');
-    await fs.rename(safepath, this.config.qualityBrain).catch(()=>{}); // best-effort
+    await fs.rename(safepath, this.config.qualityBrain).catch(() => {}); // best-effort
     this.emit('qualityUpdated', { updatesCount: updates.length });
   }
 
@@ -191,7 +230,7 @@ export class MemoryDualBrainSync extends EventEmitter {
     const safepath = this.config.executionBrain + '.sync.tmp';
     const content = updates.join('\n') + '\n';
     await fs.appendFile(safepath, content, 'utf-8');
-    await fs.rename(safepath, this.config.executionBrain).catch(()=>{});
+    await fs.rename(safepath, this.config.executionBrain).catch(() => {});
     this.emit('executionUpdated', { updatesCount: updates.length });
   }
 
@@ -203,7 +242,9 @@ export class MemoryDualBrainSync extends EventEmitter {
       try {
         const raw = await fs.readFile(this.metricsFile, 'utf-8');
         arr = JSON.parse(raw || '[]');
-      } catch { arr = []; }
+      } catch {
+        arr = [];
+      }
       arr.push(entry);
       await fs.writeFile(this.metricsFile, JSON.stringify(arr, null, 2), 'utf-8');
     } catch (err) {
