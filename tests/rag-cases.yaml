@@ -1,0 +1,17 @@
+# Minimal RAG evaluation cases
+- name: step3_todo2
+  q: "Quando devo aplicar as regras do passo 3 relacionadas a 'todo2'?"
+  k: 6
+  fetch_k: 24
+  lambda_mult: 0.5
+  filter_step: step3
+  min_results: 1
+  contains:
+    - 'todo2'
+
+- name: step1_azure_compress
+  q: 'Azure tools obrigatórios'
+  filter_step: step1
+  compress: true
+  similarity_threshold: 0.25
+  min_results: 1

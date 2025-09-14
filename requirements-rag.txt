@@ -1,0 +1,20 @@
+# Minimal dependencies for RAG indexer/query
+langchain>=0.2.12
+langchain-community>=0.2.10
+langchain-text-splitters>=0.2.2
+sentence-transformers>=2.7.0
+langchain-huggingface>=0.1.2
+pyyaml>=6.0.1
+
+# Prefer FAISS. If installation fails on the platform, the script falls back to Chroma.
+faiss-cpu>=1.8.0.post1; platform_system != "Windows" or platform_machine != "ARM64"
+
+# Fallback vector store (persistent, pure-python). Optional but recommended.
+chromadb>=0.5.5
+
+# Numeric stack pins for Windows/Python 3.12 compatibility in this project
+numpy>=2.2.6,<3; platform_system == "Windows"
+scipy>=1.13.1,<2; platform_system == "Windows"
+
+# Optional: Gemini reranking (requires GOOGLE_API_KEY)
+langchain-google-genai>=2.0.0

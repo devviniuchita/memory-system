@@ -150,6 +150,7 @@ vitest-coverage/
 # ------------------
 .venv/
 .pytest_cache/
+__pycache__/
 
 # ------------------
 # Environment & Configuration (CRITICAL - Contains secrets)
@@ -237,7 +238,6 @@ id_ed25519*
 # AI Development Tools
 .copilotignore
 .copilot/
-.cursorignore
 .qoderignore
 .github/
 copilot-rules/
@@ -248,9 +248,11 @@ copilot-instructions.md
 .todo2/
 .trae/
 .qoder/
+.kiro/
 .serena/
 .traerules
 .endgame
+.rag/
 kengi-idiomas.code-workspace
 trae-claude-mcp-server.js
 CLAUDE.md

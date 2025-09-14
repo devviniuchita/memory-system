@@ -28,15 +28,17 @@ Antes de contribuir, é essencial conhecer nossas políticas de governança:
 
 <div align="center">
 
-| Documento | Descrição | Link |
-|-----------|-----------|------|
-| **🤝 Código de Conduta** | Todos os contribuidores devem seguir nossos padrões de comportamento respeitoso e inclusivo | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) |
-| **🔒 Segurança** | Vulnerabilidades devem ser reportadas de forma responsável através dos canais apropriados | [SECURITY.md](./SECURITY.md) |
-| **👥 Responsáveis** | PRs em áreas críticas (regras de memória, configurações principais) requerem aprovação dos code owners designados | [CODEOWNERS](./CODEOWNERS) |
+| Documento                      | Descrição                                                                                                         | Link                                       |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| **🤝 Código de Conduta**       | Todos os contribuidores devem seguir nossos padrões de comportamento respeitoso e inclusivo                       | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) |
+| **🔒 Segurança**               | Vulnerabilidades devem ser reportadas de forma responsável através dos canais apropriados                         | [SECURITY.md](./SECURITY.md)               |
+| **👥 Responsáveis**            | PRs em áreas críticas (regras de memória, configurações principais) requerem aprovação dos code owners designados | [CODEOWNERS](./CODEOWNERS)                 |
+| **📢 Atualizações do Sistema** | Histórico técnico de mudanças (RAG, Dual Brain, automação e uso)                                                  | [ATUALIZATIONS.md](./ATUALIZATIONS.md)     |
 
 </div>
 
 **Pontos importantes:**
+
 - 🤝 **Respeito**: Todos os contribuidores devem aderir ao nosso Código de Conduta para manter um ambiente colaborativo e inclusivo.
 - 🔒 **Responsabilidade**: Questões de segurança devem ser reportadas através dos canais oficiais descritos em SECURITY.md, nunca publicamente.
 - 👥 **Aprovação**: Pull requests que afetam componentes críticos (memory-rules.mdc, .cursorrules, configurações MCP) passam por revisão obrigatória dos code owners.
@@ -51,16 +53,17 @@ Encontrou um problema? Ajude-nos a corrigi-lo:
 
 <div align="center">
 
-| Etapa | Ação | Descrição |
-|-------|------|-----------|
-| 1️⃣ | **Verificar issues existentes** | Evite duplicatas |
-| 2️⃣ | **Usar template de bug report** | Forneça informações claras |
-| 3️⃣ | **Incluir logs relevantes** | De `.cursor/rules/` se aplicável |
-| 4️⃣ | **Adicionar labels** | `bug`, `needs-triage` |
+| Etapa | Ação                            | Descrição                        |
+| ----- | ------------------------------- | -------------------------------- |
+| 1️⃣    | **Verificar issues existentes** | Evite duplicatas                 |
+| 2️⃣    | **Usar template de bug report** | Forneça informações claras       |
+| 3️⃣    | **Incluir logs relevantes**     | De `.cursor/rules/` se aplicável |
+| 4️⃣    | **Adicionar labels**            | `bug`, `needs-triage`            |
 
 </div>
 
 **Template de Bug Report:**
+
 ```markdown
 **Descrição do Bug**: Descrição clara e concisa
 **Passos para Reproduzir**: 1. Passo um, 2. Passo dois...
@@ -88,6 +91,7 @@ graph LR
 </div>
 
 **Template de Feature Request:**
+
 ```markdown
 **Solicitação de Funcionalidade**: Título descritivo
 **Declaração do Problema**: Que problema isso resolve?
@@ -102,16 +106,16 @@ Pronto para codificar? Aqui está como:
 
 <div align="center">
 
-| Etapa | Comando/Ação | Descrição |
-|-------|--------------|-----------|
-| 1️⃣ | **Fork do repositório** | No GitHub |
-| 2️⃣ | `git clone https://github.com/SEU_USUARIO/memory-system.git` | Clone seu fork |
-| 3️⃣ | `git checkout -b feature/sua-feature` | Crie branch da feature |
-| 4️⃣ | **Faça suas alterações** | Seguindo nosso guia de estilo |
-| 5️⃣ | **Teste completamente** | Veja requisitos de teste abaixo |
-| 6️⃣ | `git commit -m "feat: adicionar clustering semântico de memória"` | Commit com mensagens claras |
-| 7️⃣ | `git push origin feature/sua-feature` | Push para seu fork |
-| 8️⃣ | **Abrir Pull Request** | Com nosso template |
+| Etapa | Comando/Ação                                                      | Descrição                       |
+| ----- | ----------------------------------------------------------------- | ------------------------------- |
+| 1️⃣    | **Fork do repositório**                                           | No GitHub                       |
+| 2️⃣    | `git clone https://github.com/SEU_USUARIO/memory-system.git`      | Clone seu fork                  |
+| 3️⃣    | `git checkout -b feature/sua-feature`                             | Crie branch da feature          |
+| 4️⃣    | **Faça suas alterações**                                          | Seguindo nosso guia de estilo   |
+| 5️⃣    | **Teste completamente**                                           | Veja requisitos de teste abaixo |
+| 6️⃣    | `git commit -m "feat: adicionar clustering semântico de memória"` | Commit com mensagens claras     |
+| 7️⃣    | `git push origin feature/sua-feature`                             | Push para seu fork              |
+| 8️⃣    | **Abrir Pull Request**                                            | Com nosso template              |
 
 </div>
 
@@ -133,12 +137,12 @@ A documentação é crucial para adoção:
 
 <div align="center">
 
-| Categoria | Métrica | Valor Mínimo |
-|-----------|---------|--------------|
-| ⚡ **Velocidade de Embedding** | Processamento | `<50ms` |
-| 🎯 **Confiabilidade** | Uptime | `>99.9%` |
-| 🧠 **Recuperação de Memória** | Latência | `<200ms` |
-| 💾 **Eficiência de Armazenamento** | Processamento Neural | `<75ms` |
+| Categoria                          | Métrica              | Valor Mínimo |
+| ---------------------------------- | -------------------- | ------------ |
+| ⚡ **Velocidade de Embedding**     | Processamento        | `<50ms`      |
+| 🎯 **Confiabilidade**              | Uptime               | `>99.9%`     |
+| 🧠 **Recuperação de Memória**      | Latência             | `<200ms`     |
+| 💾 **Eficiência de Armazenamento** | Processamento Neural | `<75ms`      |
 
 </div>
 
@@ -154,11 +158,11 @@ A documentação é crucial para adoção:
 
 <div align="center">
 
-| Aspecto | Padrão | Exemplo |
-|---------|--------|---------|
-| **Documentação do Usuário** | Português | Interface e tutoriais |
-| **Comentários do Desenvolvedor** | Inglês | Código e especificações técnicas |
-| **Conformidade MCP** | [Model Context Protocol](https://modelcontextprotocol.io/) | Padrão obrigatório |
+| Aspecto                          | Padrão                                                     | Exemplo                          |
+| -------------------------------- | ---------------------------------------------------------- | -------------------------------- |
+| **Documentação do Usuário**      | Português                                                  | Interface e tutoriais            |
+| **Comentários do Desenvolvedor** | Inglês                                                     | Código e especificações técnicas |
+| **Conformidade MCP**             | [Model Context Protocol](https://modelcontextprotocol.io/) | Padrão obrigatório               |
 
 </div>
 
@@ -192,11 +196,11 @@ Antes de enviar PRs, execute estes prompts de validação:
 
 <div align="center">
 
-| Teste | Prompt | Resultado Esperado |
-|-------|--------|--------------------|
-| **Teste 1** | `'Analise .cursorrules, memory-rules.mdc e memory-rating.mdc. Explique sua interconexão e salve memórias do que compreendeu.'` | ✅ Criação e recuperação de memória funcionando |
-| **Teste 2** | `'Analise este projeto. Que padrões você vê? Armazene insights e atualize sua compreensão.'` | ✅ Evolução de memória funcionando |
-| **Teste 3** | `'Demonstre workflow de memória contínuo recuperando insights anteriores, analisando esta solicitação e armazenando novo conhecimento.'` | ✅ Coordenação dual-brain funcionando |
+| Teste       | Prompt                                                                                                                                   | Resultado Esperado                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| **Teste 1** | `'Analise .cursorrules, memory-rules.mdc e memory-rating.mdc. Explique sua interconexão e salve memórias do que compreendeu.'`           | ✅ Criação e recuperação de memória funcionando |
+| **Teste 2** | `'Analise este projeto. Que padrões você vê? Armazene insights e atualize sua compreensão.'`                                             | ✅ Evolução de memória funcionando              |
+| **Teste 3** | `'Demonstre workflow de memória contínuo recuperando insights anteriores, analisando esta solicitação e armazenando novo conhecimento.'` | ✅ Coordenação dual-brain funcionando           |
 
 </div>
 
@@ -215,16 +219,16 @@ Antes de enviar seu PR:
 
 <div align="center">
 
-| ✅ | Requisito | Descrição |
-|----|-----------|-----------|
-| ☐ | **Código segue diretrizes de estilo** | Padrões estabelecidos |
-| ☐ | **Todos os testes passam** | Execute os 3 prompts de validação |
-| ☐ | **Benchmarks de performance atendidos** | `<50ms`, `>99.9%` confiabilidade |
-| ☐ | **Documentação atualizada** | Se necessário |
-| ☐ | **Mensagens de commit seguem convenção** | `feat:`, `fix:`, etc. |
-| ☐ | **Sem breaking changes** | Sem discussão prévia |
-| ☐ | **Integração do sistema de memória testada** | Funcionamento completo |
-| ☐ | **Compatibilidade tripla MCP verificada** | Todos os MCPs funcionando |
+| ✅  | Requisito                                    | Descrição                         |
+| --- | -------------------------------------------- | --------------------------------- |
+| ☐   | **Código segue diretrizes de estilo**        | Padrões estabelecidos             |
+| ☐   | **Todos os testes passam**                   | Execute os 3 prompts de validação |
+| ☐   | **Benchmarks de performance atendidos**      | `<50ms`, `>99.9%` confiabilidade  |
+| ☐   | **Documentação atualizada**                  | Se necessário                     |
+| ☐   | **Mensagens de commit seguem convenção**     | `feat:`, `fix:`, etc.             |
+| ☐   | **Sem breaking changes**                     | Sem discussão prévia              |
+| ☐   | **Integração do sistema de memória testada** | Funcionamento completo            |
+| ☐   | **Compatibilidade tripla MCP verificada**    | Todos os MCPs funcionando         |
 
 </div>
 
@@ -238,12 +242,12 @@ Celebramos nossos contribuidores! Contribuições destacadas são reconhecidas a
 
 <div align="center">
 
-| Reconhecimento | Descrição |
-|----------------|-----------|
-| 🌟 **Menções no perfil GitHub** | Em releases |
-| 🏅 **Badges de contribuidor** | Na documentação |
+| Reconhecimento                  | Descrição                     |
+| ------------------------------- | ----------------------------- |
+| 🌟 **Menções no perfil GitHub** | Em releases                   |
+| 🏅 **Badges de contribuidor**   | Na documentação               |
 | 📢 **Agradecimentos especiais** | Em atualizações da comunidade |
-| 🚀 **Suporte prioritário** | Para contribuições futuras |
+| 🚀 **Suporte prioritário**      | Para contribuições futuras    |
 
 </div>
 
@@ -266,12 +270,12 @@ Estamos comprometidos em fornecer um ambiente acolhedor e inclusivo. Por favor, 
 
 <div align="center">
 
-| ✅ Faça | ❌ Não Faça |
-|---------|-------------|
-| Seja respeitoso e inclusivo | Linguagem ofensiva ou discriminatória |
-| Receba novatos e ajude-os a aprender | Comportamento de assédio |
-| Foque no que é melhor para a comunidade | Ataques pessoais |
-| Mostre empatia com outros membros | Compartilhar informações privadas |
+| ✅ Faça                                 | ❌ Não Faça                           |
+| --------------------------------------- | ------------------------------------- |
+| Seja respeitoso e inclusivo             | Linguagem ofensiva ou discriminatória |
+| Receba novatos e ajude-os a aprender    | Comportamento de assédio              |
+| Foque no que é melhor para a comunidade | Ataques pessoais                      |
+| Mostre empatia com outros membros       | Compartilhar informações privadas     |
 
 </div>
 
@@ -314,12 +318,12 @@ npm install -g supergateway
 
 <div align="center">
 
-| Área | Descrição | Impacto |
-|------|-----------|---------|
-| **Otimização RAG** | Retrieval-Augmented Generation | 🔴 Alto |
-| **Algoritmos de retenção** | Decay inteligente | 🔴 Alto |
-| **Compressão semântica** | Contexto eficiente | 🟡 Médio |
-| **Estratégias de fallback** | Para MCPs | 🟡 Médio |
+| Área                        | Descrição                      | Impacto  |
+| --------------------------- | ------------------------------ | -------- |
+| **Otimização RAG**          | Retrieval-Augmented Generation | 🔴 Alto  |
+| **Algoritmos de retenção**  | Decay inteligente              | 🔴 Alto  |
+| **Compressão semântica**    | Contexto eficiente             | 🟡 Médio |
+| **Estratégias de fallback** | Para MCPs                      | 🟡 Médio |
 
 </div>
 
@@ -345,16 +349,16 @@ npm install -g supergateway
 
 <div align="center">
 
-| Categoria | Critério | Status |
-|-----------|----------|--------|
-| **Algoritmos de Memória** | Performance testada (benchmarks incluídos) | ☐ |
-| **Integração MCP** | Servidores testados e compatíveis | ☐ |
-| **Conformidade Dual-Brain** | Validação `memory-rules.mdc` ↔ `memory-rating.mdc` | ☐ |
-| **Workflow 9 Fases** | Testes para todas as fases do ciclo | ☐ |
-| **Documentação** | Exemplos de uso incluídos | ☐ |
-| **Testes de Prompts** | 3 prompts padrão executados com sucesso | ☐ |
-| **Performance** | Não degrada métricas (`<50ms`, `>99.9%`) | ☐ |
-| **Segurança** | Validação de dados e tratamento de erros | ☐ |
+| Categoria                   | Critério                                            | Status |
+| --------------------------- | --------------------------------------------------- | ------ |
+| **Algoritmos de Memória**   | Performance testada (benchmarks incluídos)          | ☐      |
+| **Integração MCP**          | Servidores testados e compatíveis                   | ☐      |
+| **Conformidade Dual-Brain** | Validação `memory-rules.mdc` ↔ `memory-rating.mdc` | ☐      |
+| **Workflow 9 Fases**        | Testes para todas as fases do ciclo                 | ☐      |
+| **Documentação**            | Exemplos de uso incluídos                           | ☐      |
+| **Testes de Prompts**       | 3 prompts padrão executados com sucesso             | ☐      |
+| **Performance**             | Não degrada métricas (`<50ms`, `>99.9%`)            | ☐      |
+| **Segurança**               | Validação de dados e tratamento de erros            | ☐      |
 
 </div>
 
@@ -375,14 +379,15 @@ npm install -g supergateway
 
 <div align="center">
 
-| Brain | Arquivo | Responsabilidade |
-|-------|---------|------------------|
-| **Execution Brain** | `memory-rules.mdc` | Políticas de execução, recuperação e armazenamento |
-| **Quality Brain** | `memory-rating.mdc` | Critérios de qualidade, retenção e decay |
+| Brain               | Arquivo             | Responsabilidade                                   |
+| ------------------- | ------------------- | -------------------------------------------------- |
+| **Execution Brain** | `memory-rules.mdc`  | Políticas de execução, recuperação e armazenamento |
+| **Quality Brain**   | `memory-rating.mdc` | Critérios de qualidade, retenção e decay           |
 
 </div>
 
 **Workflow 9 Fases:**
+
 ```
 RETRIEVE → ENRICH → EXECUTE → STORE → UPDATE → OPTIMIZE → VALIDATE → EVOLVE → SCALE
 ```
@@ -406,12 +411,12 @@ test_scenario:
 
 <div align="center">
 
-| Métrica | Valor Mínimo | Como Testar |
-|---------|--------------|-------------|
-| **Velocidade de Embedding** | `<50ms` | Benchmark incluído no PR |
-| **Confiabilidade** | `>99.9%` | Testes de stress 1000+ ops |
-| **Velocidade de Recuperação** | `<200ms` | Testes com datasets grandes |
-| **Continuidade Cross-Session** | Seamless | Validação multi-sessão |
+| Métrica                        | Valor Mínimo | Como Testar                 |
+| ------------------------------ | ------------ | --------------------------- |
+| **Velocidade de Embedding**    | `<50ms`      | Benchmark incluído no PR    |
+| **Confiabilidade**             | `>99.9%`     | Testes de stress 1000+ ops  |
+| **Velocidade de Recuperação**  | `<200ms`     | Testes com datasets grandes |
+| **Continuidade Cross-Session** | Seamless     | Validação multi-sessão      |
 
 </div>
 
@@ -461,12 +466,12 @@ Toda contribuição que afeta algoritmos de memória deve incluir:
 
 <div align="center">
 
-| Canal | Uso | Resposta |
-|-------|-----|----------|
-| 📧 **Email** | Questões técnicas críticas | 24-48h |
-| 💬 **GitHub Discussions** | Questões técnicas gerais | Comunidade |
-| 🐛 **Bug Reports** | GitHub Issues | 1-3 dias |
-| 💼 **LinkedIn** | Networking profissional | Variável |
+| Canal                     | Uso                        | Resposta   |
+| ------------------------- | -------------------------- | ---------- |
+| 📧 **Email**              | Questões técnicas críticas | 24-48h     |
+| 💬 **GitHub Discussions** | Questões técnicas gerais   | Comunidade |
+| 🐛 **Bug Reports**        | GitHub Issues              | 1-3 dias   |
+| 💼 **LinkedIn**           | Networking profissional    | Variável   |
 
 </div>
 
@@ -484,12 +489,12 @@ Toda contribuição que afeta algoritmos de memória deve incluir:
 
 <div align="center">
 
-| Nível | Badge | Critério |
-|-------|-------|----------|
-| 🌟 **Contributors** | Básico | Listados no README principal |
-| 💎 **Memory Champions** | Avançado | Algoritmos significativos implementados |
-| ⚡ **MCP Integrators** | Especialista | Novas integrações MCP |
-| 📚 **Documentation Heroes** | Expert | Melhorias substanciais na documentação |
+| Nível                       | Badge        | Critério                                |
+| --------------------------- | ------------ | --------------------------------------- |
+| 🌟 **Contributors**         | Básico       | Listados no README principal            |
+| 💎 **Memory Champions**     | Avançado     | Algoritmos significativos implementados |
+| ⚡ **MCP Integrators**      | Especialista | Novas integrações MCP                   |
+| 📚 **Documentation Heroes** | Expert       | Melhorias substanciais na documentação  |
 
 </div>
 

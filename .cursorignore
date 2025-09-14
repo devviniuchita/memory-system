@@ -1,0 +1,56 @@
+# Python
+.pytest_cache
+.venv
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.venv/
+*.key
+*.pem
+*.p12
+
+# Arquivos de build
+bin/
+obj/
+node_modules/
+build/
+*.dll
+*.exe
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.temp
+logs/
+temp/
+
+# Arquivos de teste específicos
+*.test.backup
+
+# Arquivos grandes de dados
+*.sql.backup
+*.csv.large
+
+# Arquivos de deploy específicos
+publish/
+
+# IDE
+CLAUDE.md
+GEMINI.md
+extensions
+argv.json
+dump.rdb
+.idea/
+.claude/
+.github/
+.trae/
+.qoder/
+.kiro/
+.endgame
+.cursorignore
+.copilotignore
+.qoderignore

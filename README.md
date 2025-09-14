@@ -17,7 +17,7 @@ _Sincronização de regras dual-brain_<br>
 _Orquestração tripla de MCPs_<br>
 _Injeção de contexto contínuo_
 
-**📋 Navegação Rápida:** [⚙️ Instalação](#instalacao) • [🔥 Por que usar?](#por-que-usar) • [🎯 Como Usar](#como-usar) • [🧠 Recursos](#recursos) • [🌟 Demo](#demo) • [🚀 Em Ação](#em-acao)
+**📋 Navegação Rápida:** [⚙️ Instalação](#instalacao) • [🔥 Por que usar?](#por-que-usar) • [🎯 Como Usar](#como-usar) • [🧠 Recursos](#recursos) • [🌟 Demo](#demo) • [🚀 Em Ação](#em-acao) • [📝 Atualizações](./ATUALIZATIONS.md)
 
 </div>
 
@@ -549,6 +549,7 @@ O Memory System está liderando a **revolução da memória de IA**. Junte-se a 
 
 - 📖 [Documentação das Regras de Memória](./memory-rules.mdc)
 - 🎯 [Sistema de Avaliação de Memória](./memory-rating.mdc)
+- 📝 [Atualizações do Sistema (RAG + Dual Brain)](./ATUALIZATIONS.md)
 
 ### 🔧 **Componentes Técnicos**
 
@@ -557,6 +558,73 @@ O Memory System está liderando a **revolução da memória de IA**. Junte-se a 
 - 🚀 [Sincronização OneShot](./memory-dual-brain-sync-oneshot.js) - Execução única para produção
 - 🪟 [Script Windows](./run-sync.bat) - Execução automatizada no Windows
 - 🐧 [Script Unix/Linux](./run-sync.sh) - Execução automatizada em sistemas Unix
+
+### 🔎 RAG Local para Regras Markdown
+
+Para evitar “afogamento de contexto” ao usar muitas regras, este repositório inclui um indexador/consultor RAG local que:
+
+- Carrega `.md` e `.mdc` com exclusões de ruído (ex.: `.git/`, `images/`, `node_modules/`)
+- Split por cabeçalhos (H1/H2/H3) → split recursivo por caracteres
+- Anexa metadados (step/rule_type/priority) com base no caminho do arquivo
+- Indexa via FAISS (preferencial) com fallback automático para Chroma
+- Consulta com MMR e compressão contextual opcional (EmbeddingsFilter)
+
+Arquivos:
+
+- `tools/rag_indexer.py` — CLI para build/query
+- `requirements-rag.txt` — dependências mínimas
+
+Uso (Windows bash):
+
+```bash
+# 1) Instale Python 3.10+ e pip (se ainda não tiver)
+
+# 2) Instale dependências do RAG (idealmente em um venv)
+pip install -r requirements-rag.txt
+
+# 3) Construir o índice (persistido em .rag/index)
+python tools/rag_indexer.py build --root . --index-path .rag/index
+
+# 4) Consultar (MMR)
+python tools/rag_indexer.py query --index-path .rag/index \
+  --q "Quando devo aplicar as regras do passo 3 relacionadas a 'todo2'?" \
+  --k 6 --fetch-k 24 --lambda-mult 0.5
+
+# 5) Consultar com compressão e filtro por step
+python tools/rag_indexer.py query --index-path .rag/index \
+  --q "Azure tools obrigatórios" \
+  --filter-step step1 --compress --similarity-threshold 0.25
+```
+
+Perfis, filtros e ignores (novo):
+
+```bash
+# VS Code: apenas regras em .github/copilot-rules/*.md + .copilotignore (se existir)
+python tools/rag_indexer.py build --root . --index-path .rag/index.vscode --profile vscode
+
+# Cursor: apenas regras em .cursor/rules/*.mdc + .cursorignore (se existir)
+python tools/rag_indexer.py build --root . --index-path .rag/index.cursor --profile cursor
+
+# Customizado: múltiplas pastas, extensões e ignores
+python tools/rag_indexer.py build \
+  --root . \
+  --index-path .rag/index.custom \
+  --include-dirs .github/copilot-rules .cursor/rules \
+  --include-exts .md .mdc \
+  --exclude-dirs .trae \
+  --ignore-files .copilotignore .cursorignore
+```
+
+Notas:
+
+- Parâmetros suportados no build: `--profile (auto|vscode|cursor)`, `--include-dirs`, `--exclude-dirs`, `--ignore-files`, `--include-exts`.
+- Sem `--include-dirs`, o perfil define defaults; sem perfil, o root inteiro é varrido com exclusões padrão.
+
+Notas:
+
+- O diretório `.rag/` é ignorado no Git e guarda o índice persistente.
+- Se FAISS não estiver disponível para sua plataforma, o script usa Chroma automaticamente.
+- O primeiro uso do `sentence-transformers` fará download do modelo `all-MiniLM-L6-v2`.
 
 ### 🌐 **Protocolos e Integrações**
 
