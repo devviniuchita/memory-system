@@ -28,12 +28,12 @@ Antes de contribuir, é essencial conhecer nossas políticas de governança:
 
 <div align="center">
 
-| Documento                      | Descrição                                                                                                         | Link                                       |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| **🤝 Código de Conduta**       | Todos os contribuidores devem seguir nossos padrões de comportamento respeitoso e inclusivo                       | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) |
-| **🔒 Segurança**               | Vulnerabilidades devem ser reportadas de forma responsável através dos canais apropriados                         | [SECURITY.md](./SECURITY.md)               |
-| **👥 Responsáveis**            | PRs em áreas críticas (regras de memória, configurações principais) requerem aprovação dos code owners designados | [CODEOWNERS](./CODEOWNERS)                 |
-| **📢 Atualizações do Sistema** | Histórico técnico de mudanças (RAG, Dual Brain, automação e uso)                                                  | [ATUALIZATIONS.md](./ATUALIZATIONS.md)     |
+| Documento                   | Descrição                                                                                                         | Link                                       |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| **🤝 Código de Conduta**    | Todos os contribuidores devem seguir nossos padrões de comportamento respeitoso e inclusivo                       | [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) |
+| **🔒 Segurança**            | Vulnerabilidades devem ser reportadas de forma responsável através dos canais apropriados                         | [SECURITY.md](./SECURITY.md)               |
+| **👥 Responsáveis**         | PRs em áreas críticas (regras de memória, configurações principais) requerem aprovação dos code owners designados | [CODEOWNERS](./CODEOWNERS)                 |
+| **📢 Changelog do Sistema** | Histórico técnico de mudanças (RAG, Dual Brain, automação e uso)                                                  | [CHANGELOG.md](./CHANGELOG.md)             |
 
 </div>
 

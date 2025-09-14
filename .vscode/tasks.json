@@ -95,9 +95,20 @@
       "problemMatcher": []
     },
     {
-      "label": "Open: Updates (ATUALIZATIONS.md)",
+      "label": "Open: Changelog (CHANGELOG.md)",
       "type": "shell",
-      "command": "code --reuse-window ${workspaceFolder}/ATUALIZATIONS.md",
+      "command": "code --reuse-window ${workspaceFolder}/CHANGELOG.md",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Open: Updates (legacy)",
+      "type": "shell",
+      "command": "code --reuse-window ${workspaceFolder}/CHANGELOG.md",
       "problemMatcher": [],
       "presentation": {
         "reveal": "never",
@@ -131,7 +142,7 @@
       "label": "Docs Hub (Open All)",
       "type": "shell",
       "dependsOn": [
-        "Open: Updates (ATUALIZATIONS.md)",
+        "Open: Changelog (CHANGELOG.md)",
         "Open: Contributing (CONTRIBUTING.md)",
         "Open: README (README.md)"
       ],

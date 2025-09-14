@@ -17,7 +17,7 @@ _Sincronização de regras dual-brain_<br>
 _Orquestração tripla de MCPs_<br>
 _Injeção de contexto contínuo_
 
-**📋 Navegação Rápida:** [⚙️ Instalação](#instalacao) • [🔥 Por que usar?](#por-que-usar) • [🎯 Como Usar](#como-usar) • [🧠 Recursos](#recursos) • [🌟 Demo](#demo) • [🚀 Em Ação](#em-acao) • [📝 Atualizações](./ATUALIZATIONS.md)
+**📋 Navegação Rápida:** [⚙️ Instalação](#instalacao) • [🔥 Por que usar?](#por-que-usar) • [🎯 Como Usar](#como-usar) • [🧠 Recursos](#recursos) • [🌟 Demo](#demo) • [🚀 Em Ação](#em-acao) • [📝 Changelog](./CHANGELOG.md)
 
 </div>
 
@@ -549,7 +549,7 @@ O Memory System está liderando a **revolução da memória de IA**. Junte-se a 
 
 - 📖 [Documentação das Regras de Memória](./memory-rules.mdc)
 - 🎯 [Sistema de Avaliação de Memória](./memory-rating.mdc)
-- 📝 [Atualizações do Sistema (RAG + Dual Brain)](./ATUALIZATIONS.md)
+- 📝 [Changelog (RAG + Dual Brain)](./CHANGELOG.md)
 
 ### 🔧 **Componentes Técnicos**
 
