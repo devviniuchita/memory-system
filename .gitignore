@@ -227,7 +227,6 @@ id_ed25519*
 
 
 # Visual Studio
-.vs/
 *.rsuser
 *.suo
 *.user

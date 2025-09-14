@@ -1,0 +1,143 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "RAG: Install deps",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe -m pip install -r requirements-rag.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Build index (.rag/index)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py build --root . --index-path .rag/index",
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Watch (VSCode)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py watch --root . --index-path .rag/index.vscode --profile vscode --interval 2",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Watch (Cursor)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py watch --root . --index-path .rag/index.cursor --profile cursor --interval 2",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Build index (VSCode)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py build --root . --index-path .rag/index.vscode --profile vscode",
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Build index (Cursor)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py build --root . --index-path .rag/index.cursor --profile cursor",
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Query (VSCode)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py query --index-path .rag/index.vscode --profile vscode --q \"Quando devo aplicar as regras do passo 3 relacionadas a 'todo2'?\" --k 6 --fetch-k 24 --lambda-mult 0.5",
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Query (Cursor)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py query --index-path .rag/index.cursor --profile cursor --q \"Quando devo aplicar as regras do passo 3 relacionadas a 'todo2'?\" --k 6 --fetch-k 24 --lambda-mult 0.5",
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Query todo2 (step3)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py query --index-path .rag/index --q \"Quando devo aplicar as regras do passo 3 relacionadas a 'todo2'?\" --k 6 --fetch-k 24 --lambda-mult 0.5",
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Query Azure (step1, compress)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py query --index-path .rag/index --q \"Azure tools obrigatórios\" --filter-step step1 --compress --similarity-threshold 0.25",
+      "problemMatcher": []
+    },
+    {
+      "label": "RAG: Eval (VSCode)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_eval.py --index-path .rag/index.vscode --profile vscode --cases tests/rag-cases.yaml",
+      "problemMatcher": []
+    },
+    {
+      "label": "Bootstrap: Build→Eval→Watch (VSCode)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py build --root . --index-path .rag/index.vscode --profile vscode && ${workspaceFolder}/.venv/Scripts/python.exe tools/rag_eval.py --index-path .rag/index.vscode --profile vscode --cases tests/rag-cases.yaml && ${workspaceFolder}/.venv/Scripts/python.exe tools/rag_indexer.py watch --root . --index-path .rag/index.vscode --profile vscode --interval 2",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: Memory Dual-Brain + RAG",
+      "type": "shell",
+      "command": "${workspaceFolder}/run-sync.bat",
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/c"]
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: Memory Dual-Brain + RAG (Unix)",
+      "type": "shell",
+      "command": "bash ${workspaceFolder}/run-sync.sh",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open: Updates (ATUALIZATIONS.md)",
+      "type": "shell",
+      "command": "code --reuse-window ${workspaceFolder}/ATUALIZATIONS.md",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Open: Contributing (CONTRIBUTING.md)",
+      "type": "shell",
+      "command": "code --reuse-window ${workspaceFolder}/CONTRIBUTING.md",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Open: README (README.md)",
+      "type": "shell",
+      "command": "code --reuse-window ${workspaceFolder}/README.md",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Docs Hub (Open All)",
+      "type": "shell",
+      "dependsOn": [
+        "Open: Updates (ATUALIZATIONS.md)",
+        "Open: Contributing (CONTRIBUTING.md)",
+        "Open: README (README.md)"
+      ],
+      "dependsOrder": "sequence",
+      "command": "echo Opening docs...",
+      "problemMatcher": []
+    }
+  ]
+}
