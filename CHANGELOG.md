@@ -17,16 +17,17 @@ _Com foco na camada RAG integrada ao Dual Brain_
 
 ## 📚 Navegação Rápida
 
-- [🔮 Visão Geral](#visão-geral)
+- [🔮 Visão Geral](#visao-geral)
 - [✨ Novidades](#o-que-foi-adicionado)
-- [⚡ Uso Rápido](#como-usar-rápido)
+- [⚡ Uso Rápido](#como-usar-rapido)
 - [🚀 Ganhos](#ganhos-e-melhorias)
 - [🏗️ Arquitetura](#detalhes-de-arquitetura)
-- [🔧 Troubleshooting](#solução-de-problemas-faq)
-- [🗺️ Roadmap](#roadmap-próximos-passos)
+- [🔧 Troubleshooting](#solucao-de-problemas-faq)
+- [🗺️ Roadmap](#roadmap-proximos-passos)
 
 ---
 
+<a id="visao-geral"></a>
 ## 🔮 Visão Geral
 
 > 🧠 **Sistema Híbrido**: Pipeline "Dual Brain + RAG" totalmente automatizado e validado no Windows
@@ -90,6 +91,7 @@ flowchart TD
 
 ---
 
+<a id="o-que-foi-adicionado"></a>
 ## ✨ O que foi adicionado
 
 ### 🔧 **CLI RAG (Python)** em `tools/rag_indexer.py`
@@ -157,6 +159,7 @@ flowchart LR
 
 ---
 
+<a id="como-usar-rapido"></a>
 ## ⚡ Como usar (rápido)
 
 > 🎯 **Objetivo**: Setup completo em menos de 90 segundos
@@ -271,6 +274,7 @@ flowchart TD
 
 ---
 
+<a id="ganhos-e-melhorias"></a>
 ## 🚀 Ganhos e melhorias
 
 > 🎯 **Performance**: Melhorias mensuráveis em todos os aspectos críticos
@@ -308,6 +312,7 @@ graph TD
 
 ---
 
+<a id="detalhes-de-arquitetura"></a>
 ## 🏗️ Detalhes de arquitetura
 
 > 🧠 **Design**: Arquitetura modular e extensível baseada em padrões modernos
@@ -380,6 +385,7 @@ flowchart TD
 
 ---
 
+<a id="solucao-de-problemas-faq"></a>
 ## 🔧 Solução de problemas (FAQ)
 
 > 🚨 **Troubleshooting**: Soluções para problemas comuns
@@ -456,6 +462,7 @@ cmd.exe /c run-sync.bat
 
 ---
 
+<a id="roadmap-proximos-passos"></a>
 ## 🗺️ Roadmap (próximos passos)
 
 > 🚀 **Futuro**: Evoluções planejadas para o Memory System

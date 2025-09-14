@@ -2,6 +2,8 @@
 
 # ⚡ MEMORY SYSTEM ⚡
 
+version 2.0
+
 ## _O Primeiro Sistema de Engenharia de Contexto Híbrido que transforma a Memória Persistente da IA em um ciclo Neural Evolutivo_
 
 **RAG - Knowledge Graphs - Vetorization**
@@ -65,7 +67,11 @@ Esses arquivos são:
 
 ### _DUAL-BRAIN_
 
-Que tem por sua principal função - **ORQUESTRAR O SISTEMA TRI-MCP**<br><br>
+Que tem por sua principal função - **ORQUESTRAR O SISTEMA TRI-MCP**<br>
+
+> 🎉 **NOVIDADE!** O sistema atualizou para a _version 2.0_ e está ainda melhor! Agora com sistema **RAG vetorizado** com Chunks, Reranking, FAISS e Langchain-Huggingface.
+>
+> 📖 Para mais informações acesse: **[CHANGELOG.md](CHANGELOG.md)**<br><br>
 
 ---
 

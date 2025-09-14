@@ -10,6 +10,17 @@
 
 </div>
 
+## 📚 Navegação Rápida
+
+- [💖 Bem-vindo à Nossa Comunidade](#💖-bem-vindo-à-nossa-comunidade)
+- [📜 Governança & Regras de Contribuição](#📜-governança--regras-de-contribuição)
+- [🤝 Como Contribuir](#🤝-como-contribuir)
+- [⚡ Padrões Técnicos](#⚡-padrões-técnicos)
+- [🧪 Requisitos de Teste](#🧪-requisitos-de-teste)
+- [🎯 Checklist do Pull Request](#🎯-checklist-do-pull-request)
+- [🌟 Reconhecimento & Comunidade](#🌟-reconhecimento--comunidade)
+- [📄 Código de Conduta](#📄-código-de-conduta)
+
 ---
 
 ## 💖 **Bem-vindo à Nossa Comunidade**
